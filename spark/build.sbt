@@ -1,4 +1,4 @@
-name := "price_data"
+name := "InsightProject"
 version := "1.0"
 scalaVersion := "2.10.4"
 
@@ -20,14 +20,9 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-"com.datastax.spark" %% "spark-cassandra-connector" % "1.2.0-alpha1",
 "org.apache.spark" %% "spark-core" % "1.4.0" % "provided",
 "org.apache.spark" %% "spark-sql" % "1.4.0" % "provided",
-"com.databricks" % "spark-csv_2.10" % "1.4.0",
-"org.apache.spark" % "spark-streaming_2.10" % "1.3.0" % "provided",
-"org.apache.spark" % "spark-streaming-kafka_2.10" % "1.3.0",
 "com.websudos" %% "phantom-dsl" % PhantomVersion,
-"com.datastax.spark" %% "spark-cassandra-connector" % "1.4.0",
 "org.elasticsearch" % "elasticsearch-spark_2.10" % "2.3.2")
 
 mergeStrategy in assembly := {
