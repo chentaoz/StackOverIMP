@@ -1,0 +1,26 @@
+{
+	"query":{
+	"match":{"tags":"TAGS_REPLACE"}
+	},
+	"controls": {
+		"use_significance": false,
+		"sample_size": 2000,
+		"timeout": 5000
+	},
+	"connections": {
+		"vertices": [
+			{
+				"field": "tags",
+				"size": 100,
+				"min_doc_count": 1
+			}
+		]
+	},
+	"vertices": [
+		{
+			"field": "tags",
+			"size": 100,
+			"min_doc_count": 1
+		}
+	]
+}

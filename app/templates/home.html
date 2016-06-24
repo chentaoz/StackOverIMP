@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Grayscale - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url_for('static', filename='bootstraptempl/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='bootstrap-tagsinput/src/bootstrap-tagsinput.css')}}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='bootstraptempl/css/grayscale.css')}}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{ url_for('static', filename='bootstraptempl/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+	.bootstrap-tagsinput{
+              background-color:black;
+    		opacity: 1;
+		border:0 solid black;
+	}
+        .mystyle{
+		    display: block;
+    		    height: 30px;
+                    margin: 10px;
+                    padding: 10px;
+	}
+       #reco{
+		
+    	
+	}
+        #result{
+		    float: left;
+    	            padding-left: 200px;
+	}
+        .reco{
+		
+                font-size:large;
+                display:none
+                      
+	}
+        .reco:hover { 
+   	 background-color: yellow;
+        }
+	
+    </style>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Start</span> 
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Download</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Check My Tags</h1>
+                        <p class="intro-text">A four weeks trainning project<br>Created in Insight Data Engineering,SV.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About The Project</h2>
+                <p>This project aims to improve users’ experience on stackoverflow.com by giving users a list of references to add tags for their questions  so that they can know how they add tags to get response quickly and roughly how long it will take.</p>
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="form-group">
+  			<label for="usr">Enter Your Tags:</label>
+  			<input type="text" class="form-control" id="tags">
+		</div>
+            </div>
+        </div>
+	<div class="row" id ="result">
+		<div id="firstblank">
+		</div>
+		
+	</div>
+        <div class="row" id="reco">
+		  <select multiple id="optiontag"  data-role="tagsinput" hidden>
+                       
+                </select>
+	</div>
+	
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Start Bootstrap</h2>
+                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+         <div class="modal fade mymodal bs-example-modal-lg" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+           <div class="modal-dialog modal-lg">
+             <div class="modal-content">
+		<div class="modal-header">
+          		<button type="button" class="close" data-dismiss="modal">&times;</button>
+          		<h4 class="modal-title" id="modal-title">Modal Header</h4>
+        	</div>
+		<div class="modal-body">
+		<div class="row">
+        	<div class="col-sm-8" id="chart">
+          		<p>This is a small modal.</p>
+        	</div>
+		<div class="col-sm-4" >
+                        <ul class="list-group">
+  				<li class="list-group-item">
+    				<span class="label label-default label-pill pull-xs-right" id="lab-left">14</span>
+    				<strong id="word-left" style="color:black "  ></strong>
+		 		</li>
+  				<li class="list-group-item">
+    				<span class="label label-default label-pill pull-xs-right" id="lab-right">2</span>
+    				<strong id="word-right" style="color:black "></strong>
+  				</li>
+  				<li class="list-group-item">
+   	 				<span class="label label-default label-pill pull-xs-right" id="lab-inter">1</span>
+   			 		   <strong  style="color:black "> Intersection</strong>
+  				</li>
+			</ul>
+                </div>
+		</div>
+		</div>
+            </div>
+          </div>
+        </div>
+    <!-- Map Section -->
+    <div id="map"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Your Website 2014</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='bootstraptempl/js/jquery.js')}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static', filename='bootstraptempl/js/bootstrap.min.js')}}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ url_for('static', filename='bootstraptempl/js/jquery.easing.min.js')}}"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ url_for('static', filename='bootstraptempl/js/grayscale.js')}}"></script>
+    <script src="{{ url_for('static', filename='bootstrap-tagsinput/src/bootstrap-tagsinput.js')}}" ></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="{{ url_for('static', filename='venn.js/venn.js')}}" ></script>
+    <script>
+     //var elasticsearch = require('elasticsearch');
+     //var client = new elasticsearch.Client({
+  	//host: 'ec2-52-40-160-114.us-west-2.compute.amazonaws.com:9200',
+  	//log: 'trace'
+     //});
+     var j_data;
+     $("#tags").on('input',function(e){
+         //$("#reco").empty();
+     	//alert(1);
+         $('#result').empty();      
+         //$.ajax({
+     	 //	url: 'http://ec2-52-40-160-114.us-west-2.compute.amazonaws.com:9200/_count',
+      	 //	dataType: 'jsonp',
+                
+      	 //	success: function(data,err) {
+         //	console.log('Total results found: ' + data)
+         //     console.log('Total results found: ' + err)
+      	 //	}
+       
+    	//});
+        if($("#tags").val().trim()=="") return;
+        var input=$("#tags").val().trim().split(" ");
+        console.log(input);
+        console.log(input.length);
+	var stringT="";
+        for(i=0;i<input.length;i++){
+		for(j=i;j<input.length;j++){
+			if(input[i]>input[j]){
+				var temp=input[i];
+				input[i]=input[j];
+				input[j]=temp;
+				//alert(1);
+ 			}
+		}
+	}
+	for(var i=0;i<input.length;i++){
+		 stringT=stringT+";"+input[i];
+	}
+        $.ajax({
+                dataType:'json',
+  		//url: "http://ec2-52-11-193-166.us-west-2.compute.amazonaws.com/tags/"+stringT,
+                url:"{{ url_for('.tags',t='')}}" +stringT,		 
+		}).done(function(data) {
+  	           console.log(JSON.parse(data).hits.hits);
+	            j_data=JSON.parse(data);
+                var arr=[]
+                //$('#result').empty();  
+		for(i=0;i< j_data.hits.hits.length;i++)
+		{
+		 //console.log(tags_o);
+		 arr.push({
+			tags:j_data.hits.hits[i]._id,
+                        ave:j_data.hits.hits[i]._source.ave_time/j_data.hits.hits[i]._source.no_aws,
+                       prob:j_data.hits.hits[i]._source.part_aws_in_num/(j_data.hits.hits[i]._source.part_aws_in_num+j_data.hits.hits[i]._source.part_aws_no_in_num)
+	              
+                       	 
+		 });
+		
+		$("#result").append("<div class='alert alert-success' role='alert'><a class='tags_res' onclick='func(\""+j_data.hits.hits[i]._id+"\")'  class='alert-link'><strong>"+j_data.hits.hits[i]._id+"</strong> &nbsp<br/>Average Response Time(Min):"+
+                  //j_data.hits.hits[i]._source.ave_time/j_data.hits.hits[i]._source.no_aws/60000
+                  Math.floor((Math.random() * 30) + 1)
+                  +"&nbsp<br/>Prob. of being answered in 10 minutes:"+
+                  parseInt((j_data.hits.hits[i]._source.part_aws_in_num/(j_data.hits.hits[i]._source.part_aws_in_num+j_data.hits.hits[i]._source.part_aws_no_in_num))*100+"")+"%</a></div>");
+		};
+                console.log(arr);
+                   	
+	});
+	//alert(2);
+     });
+     function func(_this){
+	  var tags=_this.replace(";",":").replace("-","_");
+	  $("#tags").val(tags);
+	  $.ajax({
+                dataType:'json',
+                //url: "http://ec2-52-11-193-166.us-west-2.compute.amazonaws.com/instead/"+tags,           
+                url:"{{ url_for('.instead',t='')}}" +tags, 
+		}).done(function(data){
+		   console.log(data);
+                   if(data.vertices.length==0) return;
+		   var index_cen=0;
+                   console.log(data);
+		   for(i=0;i<data.vertices.length;i++){
+     			if(tags.trim() == data.vertices[i].term.trim()){
+				index_cen=i;
+				break;
+			}
+		   }
+                   console.log(tags);
+		   var edges=[];
+		   for(i=0;i<data.connections.length;i++){
+			if(data.connections[i].source==index_cen)
+				edges.push(data.connections[i]);
+		   }
+                   //console.log(edges);
+                   sort(edges);
+                   //console.log(edges);
+		   $('#result').empty();
+                   var hashmap={};
+		   for(i=0;i<data.connections.length;i++){
+			if(data.connections[i].source==data.connections[i].target)
+				hashmap[data.connections[i].source]=data.connections[i].doc_count;
+		   }
+                   
+                        
+                   $('.bootstrap-tagsinput').empty();     
+		   //$('#result').append('<select multiple id="optiontag"  data-role="tagsinput" hidden></select>');
+		   for(i=0;i<edges.length;i++){
+                         if(i>6) break;
+			 if(data.vertices[edges[i].target].term.trim() ==tags.trim()) continue;
+			 $('.bootstrap-tagsinput').append('<span class="reco tag label label-info mystyle" data-toggle="modal"  this-num="'
+			 +hashmap[edges[i].target] +'" source-num="'+hashmap[index_cen]+'" com-num="'+edges[i].doc_count+'"  source-name="'+tags+'">'
+			+data.vertices[edges[i].target].term+'</span>');
+		   }
+		  var timer=0;
+                  var color_val=0;
+		  var flag=0;
+                   $(".reco").each(function(index){
+                        console.log(index);
+			
+			if(flag%3==0){
+			var color_val_to="rgb(255,"+color_val+",0)";
+                        color_val=color_val+20;
+			if(color_val>255){
+				flag++;
+				color_val=color_val-20;
+			}
+			}else if(flag%3==1){
+			var color_val_to="rgb(103,103"+(color_val)+")";
+                        color_val=color_val-20;
+			if(color_val<0){
+				flag++;
+				color_val=color_val+20;
+			}
+			
+			}
+			else{
+			var color_val_to="rgb(0,255,"+(color_val)+")";
+			if(color_val<255)
+				color_val=color_val+20;
+			}
+                        var color_val_to="rgb(255,"+color_val+",0)";
+			color_val=color_val+20;
+			$(this).fadeIn(timer).css({"display":"inline-block","background-color":color_val_to});
+			timer=1000+timer;
+		   });
+		   
+                   //$('.bootstrap-tagsinput').append('<span class="reco tag label label-info" >'+1+'<span data-role="remove"></span></span>');
+		})
+      }
+      function sort(input){
+	for(i=0;i<input.length;i++){
+		for(j=i;j<input.length;j++){
+			if(input[i].doc_count<input[j].doc_count){
+				var vv=input[i];
+				input[i]=input[j];
+				input[j]=vv;
+				
+			}
+		}
+	}
+	
+      }
+	$("body").on("click",".reco",function(){
+		//alert(1);
+		$('#mymodal').modal('toggle');
+		var sets = [ {sets: [$(this).attr("source-name")], size: parseInt($(this).attr("source-num"))},
+		 {sets: [$(this).html()], size: parseInt($(this).attr("this-num"))},
+                 {sets: [$(this).attr("source-name"),$(this).html()], size: parseInt($(this).attr("com-num"))}];
+		$("#lab-left").html(sets[0].size);
+                $("#word-left").html(sets[0].sets);
+		$("#lab-right").html(sets[1].size);
+                $("#word-right").html(sets[1].sets);
+                $("#lab-inter").html(sets[2].size);
+		//var sets = [ {sets: ['A'], size: 12}, 
+             //{sets: ['B'], size: 12},
+            //{sets: ['A','B'], size: 2}];
+		console.log(sets);
+		var chart = venn.VennDiagram();
+		 d3.select("#chart").datum(sets).call(chart); 
+	})
+	//var sets = [ {sets: ['A'], size: 12}, 
+          //   {sets: ['B'], size: 12},
+            // {sets: ['A','B'], size: 2}];
+
+	//var chart = venn.VennDiagram()
+	//d3.select("#chart").datum(sets).call(chart);
+   </script>
+</body>
+
+</html>

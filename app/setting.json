@@ -1,0 +1,31 @@
+{
+  "settings" : {
+    "analysis" : {
+      "analyzer" : {
+        "crazy" : {
+          "type" : "custom",
+          "tokenizer" : "keyword",
+          "filter" : [ "strip_underscore" ]
+        }
+      },
+      "filter" : {
+        "strip_underscore" : {
+          "type" : "word_delimiter",
+          "generate_word_parts" : false,
+	  "catenate_all":  true
+        }
+      }
+    }
+  },
+   "mappings": {
+    "guys": {
+      "properties": {
+        "text": {
+          "type": "string",
+          "analyzer": "crazy", 
+          "search_analyzer": "standard" 
+        }
+      }
+    }
+  }
+}
