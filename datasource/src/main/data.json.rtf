@@ -1,0 +1,1568 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 [\
+  \{\
+    "Id": 4,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 7,\
+    "ParentId": 0,\
+    "CreationDate": "2008-07-31 21:42:52",\
+    "DeletionDate": 0,\
+    "Score": 398,\
+    "ViewCount": 27445,\
+    "Body": "<p>I want to use a track-bar to change a form's opacity.</p>\\n\\n<p>This is my code:</p>\\n\\n<pre><code>decimal trans = trackBar1.Value / 5000;\\nthis.Opacity = trans;\\n</code></pre>\\n\\n<p>When I try to build it, I get this error:</p>\\n\\n<blockquote>\\n  <p>Cannot implicitly convert type 'decimal' to 'double'.</p>\\n</blockquote>\\n\\n<p>I tried making <code>trans</code> a <code>double</code>, but then the control doesn't work. This code has worked fine for me in VB.NET in the past. </p>",\
+    "OwnerUserId": 8,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 5455605,\
+    "LastEditorDisplayName": "Rich B",\
+    "LastEditDate": "2015-12-23 21:34:28",\
+    "LastActivityDate": "2016-02-11 04:17:34",\
+    "Title": "When setting a form's opacity should I use a decimal or double?",\
+    "Tags": "<c#><winforms><type-conversion><decimal><opacity>",\
+    "AnswerCount": 13,\
+    "CommentCount": 3,\
+    "FavoriteCount": 30,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": "2012-10-31 16:42:47"\
+  \},\
+  \{\
+    "Id": 6,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 31,\
+    "ParentId": 0,\
+    "CreationDate": "2008-07-31 22:08:08",\
+    "DeletionDate": 0,\
+    "Score": 179,\
+    "ViewCount": 13177,\
+    "Body": "<p>I have an absolutely positioned <code>div</code> containing several children, one of which is a relatively positioned <code>div</code>. When I use a <strong>percentage-based width</strong> on the child <code>div</code>, it collapses to '0' width on <a href=\\"http://en.wikipedia.org/wiki/Internet_Explorer_7\\">Internet&nbsp;Explorer&nbsp;7</a>, but not on Firefox or Safari.</p>\\n\\n<p>If I use <strong>pixel width</strong>, it works. If the parent is relatively positioned, the percentage width on the child works.</p>\\n\\n<ol>\\n<li>Is there something I'm missing here?</li>\\n<li>Is there an easy fix for this besides the <em>pixel-based width</em> on the\\nchild?</li>\\n<li>Is there an area of the CSS specification that covers this?</li>\\n</ol>",\
+    "OwnerUserId": 9,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 63550,\
+    "LastEditorDisplayName": "Rich B",\
+    "LastEditDate": "2016-03-19 06:05:48",\
+    "LastActivityDate": "2016-03-19 06:10:52",\
+    "Title": "Percentage width child element in absolutely positioned parent on Internet Explorer 7",\
+    "Tags": "<html><css><css3><internet-explorer-7>",\
+    "AnswerCount": 5,\
+    "CommentCount": 0,\
+    "FavoriteCount": 7,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 7,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 4,\
+    "CreationDate": "2008-07-31 22:17:57",\
+    "DeletionDate": 0,\
+    "Score": 295,\
+    "ViewCount": 0,\
+    "Body": "<p>An explicit cast to double isn't necessary.</p>\\n\\n<pre><code>double trans = (double)trackBar1.Value / 5000.0;\\n</code></pre>\\n\\n<p>Identifying the constant as <code>5000.0</code> (or as <code>5000d</code>) is sufficient:</p>\\n\\n<pre><code>double trans = trackBar1.Value / 5000.0;\\ndouble trans = trackBar1.Value / 5000d;\\n</code></pre>",\
+    "OwnerUserId": 9,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 967315,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2012-10-14 11:50:16",\
+    "LastActivityDate": "2012-10-14 11:50:16",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 9,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 1404,\
+    "ParentId": 0,\
+    "CreationDate": "2008-07-31 23:40:59",\
+    "DeletionDate": 0,\
+    "Score": 1258,\
+    "ViewCount": 321648,\
+    "Body": "<p>Given a <code>DateTime</code> representing a person's birthday, how do I calculate their age?  </p>",\
+    "OwnerUserId": 1,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 1620220,\
+    "LastEditorDisplayName": "Rich B",\
+    "LastEditDate": "2015-01-15 21:43:12",\
+    "LastActivityDate": "2016-05-04 08:34:42",\
+    "Title": "How do I calculate someone's age in C#?",\
+    "Tags": "<c#><.net><datetime>",\
+    "AnswerCount": 56,\
+    "CommentCount": 5,\
+    "FavoriteCount": 307,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": "2011-08-16 19:40:43"\
+  \},\
+  \{\
+    "Id": 11,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 1248,\
+    "ParentId": 0,\
+    "CreationDate": "2008-07-31 23:55:37",\
+    "DeletionDate": 0,\
+    "Score": 1028,\
+    "ViewCount": 108054,\
+    "Body": "<p>Given a specific <code>DateTime</code> value, how do I display relative time, like:</p>\\n\\n<ul>\\n<li>2 hours ago</li>\\n<li>3 days ago</li>\\n<li>a month ago</li>\\n</ul>",\
+    "OwnerUserId": 1,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 1136709,\
+    "LastEditorDisplayName": "user2370523",\
+    "LastEditDate": "2015-12-29 02:08:37",\
+    "LastActivityDate": "2016-05-27 19:26:31",\
+    "Title": "How can relative time be calculated in C#?",\
+    "Tags": "<c#><datetime><datediff><relative-time-span>",\
+    "AnswerCount": 33,\
+    "CommentCount": 3,\
+    "FavoriteCount": 497,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": "2009-09-04 13:15:59"\
+  \},\
+  \{\
+    "Id": 12,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 11,\
+    "CreationDate": "2008-07-31 23:56:41",\
+    "DeletionDate": 0,\
+    "Score": 277,\
+    "ViewCount": 0,\
+    "Body": "<p>Well, here's how we do it on Stack Overflow.</p>\\n\\n<pre class=\\"lang-csharp prettyprint-override\\"><code>var ts = new TimeSpan(DateTime.UtcNow.Ticks - dt.Ticks);\\ndouble delta = Math.Abs(ts.TotalSeconds);\\n\\nif (delta &lt; 60)\\n\{\\n  return ts.Seconds == 1 ? \\"one second ago\\" : ts.Seconds + \\" seconds ago\\";\\n\}\\nif (delta &lt; 120)\\n\{\\n  return \\"a minute ago\\";\\n\}\\nif (delta &lt; 2700) // 45 * 60\\n\{\\n  return ts.Minutes + \\" minutes ago\\";\\n\}\\nif (delta &lt; 5400) // 90 * 60\\n\{\\n  return \\"an hour ago\\";\\n\}\\nif (delta &lt; 86400) // 24 * 60 * 60\\n\{\\n  return ts.Hours + \\" hours ago\\";\\n\}\\nif (delta &lt; 172800) // 48 * 60 * 60\\n\{\\n  return \\"yesterday\\";\\n\}\\nif (delta &lt; 2592000) // 30 * 24 * 60 * 60\\n\{\\n  return ts.Days + \\" days ago\\";\\n\}\\nif (delta &lt; 31104000) // 12 * 30 * 24 * 60 * 60\\n\{\\n  int months = Convert.ToInt32(Math.Floor((double)ts.Days / 30));\\n  return months &lt;= 1 ? \\"one month ago\\" : months + \\" months ago\\";\\n\}\\nint years = Convert.ToInt32(Math.Floor((double)ts.Days / 365));\\nreturn years &lt;= 1 ? \\"one year ago\\" : years + \\" years ago\\";\\n</code></pre>\\n\\n<p>Suggestions? Comments? Ways to improve this algorithm?</p>",\
+    "OwnerUserId": 1,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 1420197,\
+    "LastEditorDisplayName": "GateKiller",\
+    "LastEditDate": "2014-02-18 14:19:35",\
+    "LastActivityDate": "2014-02-18 14:19:35",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 13,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": "2009-09-04 13:15:59"\
+  \},\
+  \{\
+    "Id": 13,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 357,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 00:42:38",\
+    "DeletionDate": 0,\
+    "Score": 404,\
+    "ViewCount": 116822,\
+    "Body": "<p>Is there any standard way for a Web Server to be able to determine a user's timezone within a web page? Perhaps from a <code>HTTP</code> header? Or part of the user-agent string?</p>",\
+    "OwnerUserId": 9,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 5735775,\
+    "LastEditorDisplayName": "Rich B",\
+    "LastEditDate": "2016-05-04 03:22:38",\
+    "LastActivityDate": "2016-05-04 03:22:38",\
+    "Title": "Determine a User's Timezone",\
+    "Tags": "<html><browser><timezone><timezoneoffset>",\
+    "AnswerCount": 23,\
+    "CommentCount": 3,\
+    "FavoriteCount": 117,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 14,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 00:59:11",\
+    "DeletionDate": 0,\
+    "Score": 255,\
+    "ViewCount": 77884,\
+    "Body": "<p>What is the difference between <a href=\\"http://msdn.microsoft.com/en-us/library/9a6a2sxy.aspx\\"><code>Math.Floor()</code></a> and <a href=\\"http://msdn.microsoft.com/en-us/library/system.math.truncate.aspx\\"><code>Math.Truncate()</code></a> in .NET?</p>",\
+    "OwnerUserId": 11,\
+    "OwnerDisplayName": "Anonymous User",\
+    "LastEditorUserId": 23199,\
+    "LastEditorDisplayName": "Rich B",\
+    "LastEditDate": "2014-12-16 15:12:13",\
+    "LastActivityDate": "2016-04-18 19:17:38",\
+    "Title": "Difference between Math.Floor() and Math.Truncate()",\
+    "Tags": "<.net>",\
+    "AnswerCount": 8,\
+    "CommentCount": 1,\
+    "FavoriteCount": 38,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 16,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 12446,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 04:59:33",\
+    "DeletionDate": 0,\
+    "Score": 62,\
+    "ViewCount": 67017,\
+    "Body": "<p>How do you expose a <strong>LINQ</strong> query as an <strong>ASMX</strong> web service? Usually, from the business tier, I can return a typed <code>DataSet</code> or <code>DataTable</code> which can be serialized for transport over <strong>ASMX</strong>.</p>\\n\\n<p>How can I do the same for a <strong>LINQ</strong> query? Is there a way to populate a typed <code>DataSet</code> or <code>DataTable</code> via a <strong>LINQ</strong> query?: </p>\\n\\n<pre><code>public static MyDataTable CallMySproc()    \\n\{    \\n    string conn = ...;\\n\\n    MyDatabaseDataContext db = new MyDatabaseDataContext(conn);    \\n    MyDataTable dt = new MyDataTable();\\n\\n    // execute a sproc via LINQ\\n    var query = from dr in db.MySproc().AsEnumerable\\n    select dr;\\n\\n    // copy LINQ query resultset into a DataTable -this does not work !    \\n    dt = query.CopyToDataTable();\\n\\n    return dt;\\n\}\\n</code></pre>\\n\\n<p>How can I get the resultset of a <strong>LINQ</strong> query into a <code>DataSet</code> or <code>DataTable</code>? Alternatively, is the <strong>LINQ</strong> query serializeable so that I can expose it as an <strong>ASMX</strong> web service?</p>",\
+    "OwnerUserId": 2,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 1039608,\
+    "LastEditorDisplayName": "Chris Fournier",\
+    "LastEditDate": "2012-05-04 09:01:26",\
+    "LastActivityDate": "2014-10-10 06:02:15",\
+    "Title": "Filling a DataSet or DataTable from a LINQ query result set",\
+    "Tags": "<c#><linq><web-services><.net-3.5>",\
+    "AnswerCount": 5,\
+    "CommentCount": 0,\
+    "FavoriteCount": 10,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 17,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 26,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 05:09:55",\
+    "DeletionDate": 0,\
+    "Score": 92,\
+    "ViewCount": 40583,\
+    "Body": "<p>How do I store binary data in <a href=\\"http://en.wikipedia.org/wiki/MySQL\\">MySQL</a>?</p>",\
+    "OwnerUserId": 2,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 546051,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2011-10-21 21:29:17",\
+    "LastActivityDate": "2016-06-02 05:56:26",\
+    "Title": "Binary Data in MySQL",\
+    "Tags": "<mysql><database><binary-data><data-storage>",\
+    "AnswerCount": 10,\
+    "CommentCount": 0,\
+    "FavoriteCount": 11,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 18,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 17,\
+    "CreationDate": "2008-08-01 05:12:44",\
+    "DeletionDate": 0,\
+    "Score": 28,\
+    "ViewCount": 0,\
+    "Body": "<p>For a table like this:</p>\\n\\n<pre><code>CREATE TABLE binary_data (\\n    id INT(4) NOT NULL AUTO_INCREMENT PRIMARY KEY,\\n    description CHAR(50),\\n    bin_data LONGBLOB,\\n    filename CHAR(50),\\n    filesize CHAR(50),\\n    filetype CHAR(50)\\n);\\n</code></pre>\\n\\n<p>Here is a PHP example:</p>\\n\\n<pre><code>&lt;?php\\n    // store.php3 - by Florian Dittmer &lt;dittmer@gmx.net&gt;\\n    // Example php script to demonstrate the storing of binary files into\\n    // an sql database. More information can be found at http://www.phpbuilder.com/\\n?&gt;\\n\\n&lt;html&gt;\\n    &lt;head&gt;&lt;title&gt;Store binary data into SQL Database&lt;/title&gt;&lt;/head&gt;\\n\\n    &lt;body&gt;\\n        &lt;?php\\n            // Code that will be executed if the form has been submitted:\\n\\n            if ($submit) \{\\n                // Connect to the database (you may have to adjust\\n                // the hostname, username or password).\\n\\n                mysql_connect(\\"localhost\\", \\"root\\", \\"password\\");\\n                mysql_select_db(\\"binary_data\\");\\n\\n                $data = mysql_real_escape_string(fread(fopen($form_data, \\"r\\"), filesize($form_data)));\\n\\n                $result = mysql_query(\\"INSERT INTO binary_data (description, bin_data, filename, filesize, filetype) \\".\\n                                    \\"VALUES ('$form_description', '$data', '$form_data_name', '$form_data_size', '$form_data_type')\\");\\n\\n                $id= mysql_insert_id();\\n                print \\"&lt;p&gt;This file has the following Database ID: &lt;b&gt;$id&lt;/b&gt;\\";\\n\\n                mysql_close();\\n            \} else \{\\n\\n                // else show the form to submit new data:\\n        ?&gt;\\n        &lt;form method=\\"post\\" action=\\"&lt;?php echo $PHP_SELF; ?&gt;\\" enctype=\\"multipart/form-data\\"&gt;\\n            File Description:&lt;br&gt;\\n            &lt;input type=\\"text\\" name=\\"form_description\\"  size=\\"40\\"&gt;\\n            &lt;input type=\\"hidden\\" name=\\"MAX_FILE_SIZE\\" value=\\"1000000\\"&gt;\\n            &lt;br&gt;File to upload/store in database:&lt;br&gt;\\n            &lt;input type=\\"file\\" name=\\"form_data\\"  size=\\"40\\"&gt;\\n            &lt;p&gt;&lt;input type=\\"submit\\" name=\\"submit\\" value=\\"submit\\"&gt;\\n        &lt;/form&gt;\\n\\n        &lt;?php\\n            \}\\n        ?&gt;\\n    &lt;/body&gt;\\n&lt;/html&gt;\\n</code></pre>",\
+    "OwnerUserId": 0,\
+    "OwnerDisplayName": "phpguy",\
+    "LastEditorUserId": 126039,\
+    "LastEditorDisplayName": "Jeff Atwood",\
+    "LastEditDate": "2016-06-02 05:56:26",\
+    "LastActivityDate": "2016-06-02 05:56:26",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 2,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 19,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 531,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 05:21:22",\
+    "DeletionDate": 0,\
+    "Score": 204,\
+    "ViewCount": 32282,\
+    "Body": "<p>Solutions are welcome in any language. :-) I'm looking for the fastest way to obtain the value of \uc0\u960 , as a personal challenge. More specifically I'm using ways that don't involve using <code>#define</code>d constants like <code>M_PI</code>, or hard-coding the number in.</p>\\n\\n<p>The program below tests the various ways I know of. The inline assembly version is, in theory, the fastest option, though clearly not portable; I've included it as a baseline to compare the other versions against. In my tests, with built-ins, the <code>4 * atan(1)</code> version is fastest on GCC 4.2, because it auto-folds the <code>atan(1)</code> into a constant. With <code>-fno-builtin</code> specified, the <code>atan2(0, -1)</code> version is fastest.</p>\\n\\n<p>Here's the main testing program (<code>pitimes.c</code>):</p>\\n\\n<pre class=\\"lang-c prettyprint-override\\"><code>#include &lt;math.h&gt;\\n#include &lt;stdio.h&gt;\\n#include &lt;time.h&gt;\\n\\n#define ITERS 10000000\\n#define TESTWITH(x) \{                                                       \\\\\\n    diff = 0.0;                                                             \\\\\\n    time1 = clock();                                                        \\\\\\n    for (i = 0; i &lt; ITERS; ++i)                                             \\\\\\n        diff += (x) - M_PI;                                                 \\\\\\n    time2 = clock();                                                        \\\\\\n    printf(\\"%s\\\\t=&gt; %e, time =&gt; %f\\\\n\\", #x, diff, diffclock(time2, time1));   \\\\\\n\}\\n\\nstatic inline double\\ndiffclock(clock_t time1, clock_t time0)\\n\{\\n    return (double) (time1 - time0) / CLOCKS_PER_SEC;\\n\}\\n\\nint\\nmain()\\n\{\\n    int i;\\n    clock_t time1, time2;\\n    double diff;\\n\\n    /* Warmup. The atan2 case catches GCC's atan folding (which would\\n     * optimise the ``4 * atan(1) - M_PI'' to a no-op), if -fno-builtin\\n     * is not used. */\\n    TESTWITH(4 * atan(1))\\n    TESTWITH(4 * atan2(1, 1))\\n\\n#if defined(__GNUC__) &amp;&amp; (defined(__i386__) || defined(__amd64__))\\n    extern double fldpi();\\n    TESTWITH(fldpi())\\n#endif\\n\\n    /* Actual tests start here. */\\n    TESTWITH(atan2(0, -1))\\n    TESTWITH(acos(-1))\\n    TESTWITH(2 * asin(1))\\n    TESTWITH(4 * atan2(1, 1))\\n    TESTWITH(4 * atan(1))\\n\\n    return 0;\\n\}\\n</code></pre>\\n\\n<p>And the inline assembly stuff (<code>fldpi.c</code>), noting that it will only work for x86 and x64 systems:</p>\\n\\n<pre class=\\"lang-c prettyprint-override\\"><code>double\\nfldpi()\\n\{\\n    double pi;\\n    asm(\\"fldpi\\" : \\"=t\\" (pi));\\n    return pi;\\n\}\\n</code></pre>\\n\\n<p>And a build script that builds all the configurations I'm testing (<code>build.sh</code>):</p>\\n\\n<pre><code>#!/bin/sh\\ngcc -O3 -Wall -c           -m32 -o fldpi-32.o fldpi.c\\ngcc -O3 -Wall -c           -m64 -o fldpi-64.o fldpi.c\\n\\ngcc -O3 -Wall -ffast-math  -m32 -o pitimes1-32 pitimes.c fldpi-32.o\\ngcc -O3 -Wall              -m32 -o pitimes2-32 pitimes.c fldpi-32.o -lm\\ngcc -O3 -Wall -fno-builtin -m32 -o pitimes3-32 pitimes.c fldpi-32.o -lm\\ngcc -O3 -Wall -ffast-math  -m64 -o pitimes1-64 pitimes.c fldpi-64.o -lm\\ngcc -O3 -Wall              -m64 -o pitimes2-64 pitimes.c fldpi-64.o -lm\\ngcc -O3 -Wall -fno-builtin -m64 -o pitimes3-64 pitimes.c fldpi-64.o -lm\\n</code></pre>\\n\\n<p>Apart from testing between various compiler flags (I've compared 32-bit against 64-bit too, because the optimisations are different), I've also tried switching the order of the tests around. The <code>atan2(0, -1)</code> version still comes out top every time, though.</p>",\
+    "OwnerUserId": 13,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 635549,\
+    "LastEditorDisplayName": "Chris Jester-Young",\
+    "LastEditDate": "2015-07-11 12:15:53",\
+    "LastActivityDate": "2015-11-30 21:15:16",\
+    "Title": "What is the fastest way to get the value of \uc0\u960 ?",\
+    "Tags": "<performance><algorithm><language-agnostic><unix><pi>",\
+    "AnswerCount": 21,\
+    "CommentCount": 15,\
+    "FavoriteCount": 67,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 21,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 9,\
+    "CreationDate": "2008-08-01 08:57:27",\
+    "DeletionDate": 0,\
+    "Score": 22,\
+    "ViewCount": 0,\
+    "Body": "<p>Many years ago, to provide an <a href=\\"http://cloud9.hedgee.com/age\\">age calculator gimmick</a> on my website, I wrote a function to calculate age to a fraction. This is a quick port of that function to C# (from <a href=\\"http://hedgee.svn.sourceforge.net/viewvc/hedgee/trunk/chris/ckwww/ckage.php3\\">the PHP version</a>). I'm afraid I haven't been able to test the C# version, but hope you enjoy all the same!</p>\\n\\n<p>(Admittedly this is a bit gimmicky for the purposes of showing user profiles on Stack Overflow, but maybe readers will find some use for it. :-))</p>\\n\\n<pre><code>double AgeDiff(DateTime date1, DateTime date2) \{<br>    double years = date2.Year - date1.Year;<br><br>    /*<br>     * If date2 and date1 + round(date2 - date1) are on different sides<br>     * of 29 February, then our partial year is considered to have 366<br>     * days total, otherwise it's 365. Note that 59 is the day number<br>     * of 29 Feb.<br>     */<br>    double fraction = 365<br>            + (DateTime.IsLeapYear(date2.Year) &amp;&amp; date2.DayOfYear &gt;= 59<br>            &amp;&amp; (date1.DayOfYear &lt; 59 || date1.DayOfYear &gt; date2.DayOfYear)<br>            ? 1 : 0);<br><br>    /*<br>     * The only really nontrivial case is if date1 is in a leap year,<br>     * and date2 is not. So let's handle the others first.<br>     */<br>    if (DateTime.IsLeapYear(date2.Year) == DateTime.IsLeapYear(date1.Year))<br>        return years + (date2.DayOfYear - date1.DayOfYear) / fraction;<br><br>    /*<br>     * If date2 is in a leap year, but date1 is not and is March or<br>     * beyond, shift up by a day.<br>     */<br>    if (DateTime.IsLeapYear(date2.Year)) \{<br>        return years + (date2.DayOfYear - date1.DayOfYear<br>                - (date1.DayOfYear &gt;= 59 ? 1 : 0)) / fraction;<br>    \}<br><br>    /*<br>     * If date1 is not on 29 February, shift down date1 by a day if<br>     * March or later. Proceed normally.<br>     */<br>    if (date1.DayOfYear != 59) \{<br>        return years + (date2.DayOfYear - date1.DayOfYear<br>                + (date1.DayOfYear &gt; 59 ? 1 : 0)) / fraction;<br>    \}<br><br>    /*<br>     * Okay, here date1 is on 29 February, and date2 is not on a leap<br>     * year. What to do now? On 28 Feb in date2's year, the ``age''<br>     * should be just shy of a whole number, and on 1 Mar should be<br>     * just over. Perhaps the easiest way is to a point halfway<br>     * between those two: 58.5.<br>     */<br>    return years + (date2.DayOfYear - 58.5) / fraction;<br>\}<br></code></pre>",\
+    "OwnerUserId": 13,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 13,\
+    "LastEditorDisplayName": "Chris Jester-Young",\
+    "LastEditDate": "2008-08-01 12:35:11",\
+    "LastActivityDate": "2008-08-01 12:35:11",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": "2011-08-16 19:40:43"\
+  \},\
+  \{\
+    "Id": 22,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 9,\
+    "CreationDate": "2008-08-01 12:07:19",\
+    "DeletionDate": 0,\
+    "Score": 15,\
+    "ViewCount": 0,\
+    "Body": "<p>The best way that I know of because of leap years and everything is:</p>\\n\\n<pre><code>DateTime birthDate = new DateTime(2000,3,1);<br>int age = (int)Math.Floor((DateTime.Now - birthDate).TotalDays / 365.25D);<br></code></pre>\\n\\n<p>Hope this helps.</p>",\
+    "OwnerUserId": 17,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 17,\
+    "LastEditorDisplayName": "Nick",\
+    "LastEditDate": "2008-08-01 15:26:37",\
+    "LastActivityDate": "2008-08-01 15:26:37",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": "2011-08-16 19:40:43"\
+  \},\
+  \{\
+    "Id": 24,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 49,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 12:12:19",\
+    "DeletionDate": 0,\
+    "Score": 75,\
+    "ViewCount": 36209,\
+    "Body": "<p>If I have a <code>trigger</code> <code>before the update</code> on a table, how can I throw an error that prevents the update on that table?</p>",\
+    "OwnerUserId": 22,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 5195227,\
+    "LastEditorDisplayName": "Jim Anderson",\
+    "LastEditDate": "2016-03-11 08:26:05",\
+    "LastActivityDate": "2016-04-09 23:16:28",\
+    "Title": "Throw an error in a MySQL trigger",\
+    "Tags": "<mysql><database><triggers>",\
+    "AnswerCount": 5,\
+    "CommentCount": 0,\
+    "FavoriteCount": 14,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 25,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 1443907,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 12:13:50",\
+    "DeletionDate": 0,\
+    "Score": 80,\
+    "ViewCount": 6553,\
+    "Body": "<p>I've been having issues getting the <strong>C sockets API</strong> to work properly in <code>C++</code>. Specifically, even though I'm including <code>sys/socket.h</code>, I'm still getting compile time errors telling me that <code>AF_INET</code> is not defined. Am I missing something obvious, or could this be related to the fact that I'm doing this coding on <code>z/OS</code> and my problems are much more complicated?</p>\\n\\n<hr>\\n\\n<p><strong>Update</strong>: Upon further investigation, I discovered that there is an <code>#ifdef</code> that I'm hitting. Apparently <code>z/OS</code> isn't happy unless I define which <em>type</em> of sockets I'm using with:</p>\\n\\n<pre><code>#define _OE_SOCKETS\\n</code></pre>\\n\\n<p>Now, I personally have no idea what this <code>_OE_SOCKETS</code> is actually for, so if any <code>z/OS</code> sockets programmers are out there (all 3 of you), perhaps you could give me a rundown on how this all works?</p>",\
+    "OwnerUserId": 23,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 0,\
+    "LastEditorDisplayName": "user5857081",\
+    "LastEditDate": "2016-03-15 01:22:33",\
+    "LastActivityDate": "2016-03-15 01:22:33",\
+    "Title": "Using C socket API in C++ on z/OS",\
+    "Tags": "<c++><c><sockets><mainframe><zos>",\
+    "AnswerCount": 10,\
+    "CommentCount": 0,\
+    "FavoriteCount": 3,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 26,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 17,\
+    "CreationDate": "2008-08-01 12:16:22",\
+    "DeletionDate": 0,\
+    "Score": 74,\
+    "ViewCount": 0,\
+    "Body": "<p>The answer by phpguy is correct but I think there is a lot of confusion in the  additional details there.</p>\\n\\n<p>The basic answer is in a <code>BLOB</code> data type / attribute domain. <strong>BLOB</strong> is short for Binary Large Object and that column data type is specific for handling binary data.</p>\\n\\n<p>See <a href=\\"http://dev.mysql.com/doc/refman/5.7/en/blob.html\\" rel=\\"nofollow\\">the relevant manual page for MySQL</a>.</p>",\
+    "OwnerUserId": 48,\
+    "OwnerDisplayName": "Mat Scales",\
+    "LastEditorUserId": 126039,\
+    "LastEditorDisplayName": "Geoff Dalgas",\
+    "LastEditDate": "2016-06-02 05:55:17",\
+    "LastActivityDate": "2016-06-02 05:55:17",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 27,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 11,\
+    "CreationDate": "2008-08-01 12:17:19",\
+    "DeletionDate": 0,\
+    "Score": 23,\
+    "ViewCount": 0,\
+    "Body": "<p>@jeff</p>\\n\\n<p>IMHO yours seems a little long.  However it does seem a little more robust with support for \\"yesterday\\" and \\"years\\".  But in my experience when this is used the person is most likely to view the content in the first 30 days.  It is only the really hardcore people that come after that.  So that is why I usually elect to keep this short and simple.</p>\\n\\n<p>This is the method I am currently using on one of my websites.  This only returns a relative day, hour, time.  And then the user has to slap on \\"ago\\" in the output.</p>\\n\\n<pre><code>public static string ToLongString(this TimeSpan time)<br>\{<br>    string output = String.Empty;<br><br>    if (time.Days &gt; 0)<br>        output += time.Days + \\" days \\";<br><br>    if ((time.Days == 0 || time.Days == 1) &amp;&amp; time.Hours &gt; 0)<br>        output += time.Hours + \\" hr \\";<br><br>    if (time.Days == 0 &amp;&amp; time.Minutes &gt; 0)<br>        output += time.Minutes + \\" min \\";<br><br>    if (output.Length == 0)<br>        output += time.Seconds + \\" sec\\";<br><br>    return output.Trim();<br>\}<br></code></pre>",\
+    "OwnerUserId": 17,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 17,\
+    "LastEditorDisplayName": "Nick Berardi",\
+    "LastEditDate": "2008-08-01 13:16:49",\
+    "LastActivityDate": "2008-08-01 13:16:49",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": "2009-09-04 13:15:59"\
+  \},\
+  \{\
+    "Id": 29,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 13,\
+    "CreationDate": "2008-08-01 12:19:17",\
+    "DeletionDate": 0,\
+    "Score": 37,\
+    "ViewCount": 0,\
+    "Body": "<p>There are no HTTP headers that will report the clients timezone so far although it has been suggested to include it in the HTTP specification.</p>\\n\\n<p>If it was me, I would probably try to fetch the timezone using clientside JavaScript and then submit it to the server using Ajax or something.</p>",\
+    "OwnerUserId": 19,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 0,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": 0,\
+    "LastActivityDate": "2008-08-01 12:19:17",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 1,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 30,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 25,\
+    "CreationDate": "2008-08-01 12:22:40",\
+    "DeletionDate": 0,\
+    "Score": 20,\
+    "ViewCount": 0,\
+    "Body": "<p>I've had no trouble using the BSD sockets API in C++, in GNU/Linux. Here's the sample program I used:</p>\\n\\n<pre><code>#include &lt;sys/socket.h&gt;<br><br>int<br>main()<br>\{<br>    return AF_INET;<br>\}<br></code></pre>\\n\\n<p>So my take on this is that z/OS is probably the complicating factor here, however, because I've never used z/OS before, much less programmed in it, I can't say this definitively. :-P</p>",\
+    "OwnerUserId": 13,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 0,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": 0,\
+    "LastActivityDate": "2008-08-01 12:22:40",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 31,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 6,\
+    "CreationDate": "2008-08-01 12:22:51",\
+    "DeletionDate": 0,\
+    "Score": 89,\
+    "ViewCount": 0,\
+    "Body": "<p>The parent <code>div</code> needs to have a defined <code>width</code>, either in pixels or as a percentage. In Internet&nbsp;Explorer&nbsp;7, the parent <code>div</code> needs a defined <code>width</code> for child percentage <code>div</code>s to work correctly.</p>",\
+    "OwnerUserId": 0,\
+    "OwnerDisplayName": "maclema",\
+    "LastEditorUserId": 63550,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2016-03-19 06:10:52",\
+    "LastActivityDate": "2016-03-19 06:10:52",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 33,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 14,\
+    "CreationDate": "2008-08-01 12:26:39",\
+    "DeletionDate": 0,\
+    "Score": 333,\
+    "ViewCount": 0,\
+    "Body": "<p><code>Math.Floor</code> rounds down, <code>Math.Ceiling</code> rounds up, and <code>Math.Truncate</code> rounds towards zero. Thus, <code>Math.Truncate</code> is like <code>Math.Floor</code> for positive numbers, and like <code>Math.Ceiling</code> for negative numbers. Here's the <a href=\\"http://msdn.microsoft.com/en-us/library/system.math.truncate.aspx\\">reference</a>.</p>\\n\\n<p>For completeness, <code>Math.Round</code> rounds to the nearest integer. If the number is exactly midway between two integers, then it rounds towards the even one. <a href=\\"http://msdn.microsoft.com/en-us/library/system.math.round.aspx\\">Reference.</a></p>\\n\\n<p>See also: <a href=\\"http://stackoverflow.com/questions/14/whats-the-difference-between-math-floor-and-math-truncate-in-c/580252#580252\\">Pax Diablo's answer</a>. Highly recommended!</p>",\
+    "OwnerUserId": 13,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 13,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2009-10-14 02:09:03",\
+    "LastActivityDate": "2009-10-14 02:09:03",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 3,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 34,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 12:30:57",\
+    "DeletionDate": 0,\
+    "Score": 40,\
+    "ViewCount": 6917,\
+    "Body": "<p>How do I forcefully unload a <code>ByteArray</code> from memory in ActionScript 3?</p>\\n\\n<p>I have tried (without success):</p>\\n\\n<pre><code>byteArray.length = 0;\\nbyteArray = new ByteArray();\\n</code></pre>\\n\\n<p>And</p>\\n\\n<pre><code>for ( var i:int=0; i &lt; byteArray.length; i++ ) \{\\n    byteArray[i] = null;\\n\}\\n</code></pre>",\
+    "OwnerUserId": 0,\
+    "OwnerDisplayName": "maclema",\
+    "LastEditorUserId": 1213296,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2015-12-16 05:35:30",\
+    "LastActivityDate": "2016-05-28 20:12:42",\
+    "Title": "Unloading a ByteArray in Actionscript 3",\
+    "Tags": "<actionscript-3><flex><bytearray>",\
+    "AnswerCount": 8,\
+    "CommentCount": 0,\
+    "FavoriteCount": 1,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 36,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 352,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 12:35:56",\
+    "DeletionDate": 0,\
+    "Score": 91,\
+    "ViewCount": 38651,\
+    "Body": "<p>How can I monitor an SQL Server database for changes to a table without using triggers or modifying the structure of the database in any way? My preferred programming environment is <a href=\\"http://en.wikipedia.org/wiki/.NET_Framework\\">.NET</a> and C#.</p>\\n\\n<p>I'd like to be able to support any <a href=\\"http://en.wikipedia.org/wiki/Microsoft_SQL_Server#Genesis\\">SQL&nbsp;Server 2000</a> SP4 or newer. My application is a bolt-on data visualization for another company's product. Our customer base is in the thousands, so I don't want to have to put in requirements that we modify the third-party vendor's table at every installation.</p>\\n\\n<p>By <em>\\"changes to a table\\"</em> I mean changes to table data, not changes to table structure.</p>\\n\\n<p>Ultimately, I would like the change to trigger an event in my application, instead of having to check for changes at an interval.</p>\\n\\n<hr>\\n\\n<p>The best course of action given my requirements (no triggers or schema modification, SQL&nbsp;Server 2000 and 2005) seems to be to use the BINARY_CHECKSUM function in <a href=\\"http://en.wikipedia.org/wiki/Transact-SQL\\">T-SQL</a>. The way I plan to implement is this:</p>\\n\\n<p>Every X seconds run the following query:</p>\\n\\n<pre><code>SELECT CHECKSUM_AGG(BINARY_CHECKSUM(*)) FROM sample_table WITH (NOLOCK);\\n</code></pre>\\n\\n<p>and compare that against the stored value. If the value has changed, go through the table row by row using the query</p>\\n\\n<pre><code>select row_id,BINARY_CHECKSUM(*) from sample_table WITH (NOLOCK);\\n</code></pre>\\n\\n<p>and compare the returned checksums against stored values.</p>",\
+    "OwnerUserId": 32,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 1814657,\
+    "LastEditorDisplayName": "Mark Harrison",\
+    "LastEditDate": "2016-01-02 05:31:30",\
+    "LastActivityDate": "2016-05-16 05:08:45",\
+    "Title": "Check for changes to an SQL Server table?",\
+    "Tags": "<sql><sql-server><datatable><rdbms>",\
+    "AnswerCount": 8,\
+    "CommentCount": 1,\
+    "FavoriteCount": 20,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 37,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 25,\
+    "CreationDate": "2008-08-01 12:36:00",\
+    "DeletionDate": 0,\
+    "Score": 26,\
+    "ViewCount": 0,\
+    "Body": "<p>Sure I can post a test app.</p>\\n\\n<pre><code>#include &lt;sys/socket.h&gt;<br><br>int main()<br>\{<br>    return AF_INET;<br>\}<br></code></pre>\\n\\n<p>Compile/Link Output:</p>\\n\\n<p>cxx -Wc,xplink -Wl,xplink -o inet_test inet.C</p>\\n\\n<p>\\"./inet.C\\", line 5.16: CCN5274 (S) The name lookup for \\"AF_INET\\" did not find a declaration.</p>\\n\\n<p>CCN0797(I) Compilation failed for file ./inet.C. Object file not created.</p>\\n\\n<p>A check of sys/sockets.h does include the definition I need, and as far as I can tell, it is not being blocked by any #ifdef statements.</p>\\n\\n<p>I have however noticed it contains a the following:</p>\\n\\n<pre><code>#ifdef __cplusplus<br>  extern \\"C\\" \{<br>#endif<br></code></pre>\\n\\n<p>which encapsulates basically the whole file. Not sure if it matters.</p>",\
+    "OwnerUserId": 23,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 23,\
+    "LastEditorDisplayName": "Jax",\
+    "LastEditDate": "2008-08-01 12:42:32",\
+    "LastActivityDate": "2008-08-01 12:42:32",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 39,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 45,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 12:43:11",\
+    "DeletionDate": 0,\
+    "Score": 47,\
+    "ViewCount": 3564,\
+    "Body": "<p>I am aware that in <a href=\\"http://en.wikipedia.org/wiki/.NET_Framework\\">.NET</a> there are three timer types (see <em><a href=\\"http://msdn.microsoft.com/en-us/magazine/cc164015.aspx\\">Comparing the Timer Classes in the .NET Framework Class Library</a></em>). I have chosen a threaded timer as the other types can drift if the main thread is busy, and I need this to be reliable.</p>\\n\\n<p>The way this timer works in the control of the timer is put on another thread so it can always tick along with the work begin completed on the parent thread when it is not busy.</p>\\n\\n<p>The issue with this timer in a console application is that while the timer is ticking along on another thread the main thread is not doing anything so the application closes.</p>\\n\\n<p>I tried adding a <code>while true</code> loop, but then the main thread is too busy when the timer does go off.</p>",\
+    "OwnerUserId": 33,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 63550,\
+    "LastEditorDisplayName": "Jim Anderson",\
+    "LastEditDate": "2012-05-25 20:55:43",\
+    "LastActivityDate": "2014-01-17 09:33:10",\
+    "Title": "Reliable timer in a console application",\
+    "Tags": "<c#><.net><vb.net><timer>",\
+    "AnswerCount": 2,\
+    "CommentCount": 0,\
+    "FavoriteCount": 2,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 42,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 77,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 12:50:18",\
+    "DeletionDate": 0,\
+    "Score": 192,\
+    "ViewCount": 23969,\
+    "Body": "<p>I am starting a new web application in PHP and this time around I want to create something that people can extend by using a plugin interface. </p>\\n\\n<p>How does one go about writing 'hooks' into their code so that plugins can attach to specific events?</p>",\
+    "OwnerUserId": 37,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 4595675,\
+    "LastEditorDisplayName": "Vaibhav",\
+    "LastEditDate": "2015-12-14 20:05:51",\
+    "LastActivityDate": "2016-05-15 16:03:48",\
+    "Title": "Best way to allow plugins for a PHP application",\
+    "Tags": "<php><plugins><architecture><hook>",\
+    "AnswerCount": 8,\
+    "CommentCount": 0,\
+    "FavoriteCount": 98,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 44,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 39,\
+    "CreationDate": "2008-08-01 12:55:42",\
+    "DeletionDate": 0,\
+    "Score": 9,\
+    "ViewCount": 0,\
+    "Body": "<p>Consider using a <a href=\\"http://msdn.microsoft.com/en-us/library/system.threading.manualresetevent.aspx\\">ManualResetEvent</a> to block the main thread at the end of its processing, and call <code>Reset()</code> on it once the timer's processing has finished.  If this is something that needs to run constantly, consider moving this into a service process instead of a console app.</p>",\
+    "OwnerUserId": 35,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 967315,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2012-10-14 12:20:15",\
+    "LastActivityDate": "2012-10-14 12:20:15",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 45,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 39,\
+    "CreationDate": "2008-08-01 12:56:37",\
+    "DeletionDate": 0,\
+    "Score": 32,\
+    "ViewCount": 0,\
+    "Body": "<p>You can use something like <code>Console.ReadLine()</code> to block the main thread, so other background threads (like timer threads) will still work. You may also use an <a href=\\"http://msdn.microsoft.com/en-us/library/system.threading.autoresetevent.aspx\\">AutoResetEvent</a> to block the execution, then (when you need to) you can call Set() method on that AutoResetEvent object to release the main thread. Also ensure that your reference to Timer object doesn't go out of scope and garbage collected.</p>",\
+    "OwnerUserId": 39,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 967315,\
+    "LastEditorDisplayName": "huseyint",\
+    "LastEditDate": "2012-10-14 12:20:06",\
+    "LastActivityDate": "2012-10-14 12:20:06",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 48,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 31910,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 13:01:17",\
+    "DeletionDate": 0,\
+    "Score": 176,\
+    "ViewCount": 165443,\
+    "Body": "<p>Let's say you create a Wizard in an HTML form. One button goes back and one goes forward.  Since the <em>back</em> button appears first in the markup, when you press Enter it will use that button to submit the form. </p>\\n\\n<p>Example:</p>\\n\\n<pre><code>&lt;form&gt;\\n   &lt;input type=\\"text\\" name=\\"field1\\" /&gt; &lt;!-- put your cursor in this field and press Enter --&gt;\\n\\n   &lt;input type=\\"submit\\" name=\\"prev\\" value=\\"Previous Page\\" /&gt; &lt;!-- This is the button that will submit --&gt;\\n   &lt;input type=\\"submit\\" name=\\"next\\" value=\\"Next Page\\" /&gt; &lt;!-- But this is the button that I WANT to submit --&gt;\\n&lt;/form&gt;\\n</code></pre>\\n\\n<p>What I would like to do, is get to decide which button is used to submit the form when a user presses Enter. That way, when you press Enter the Wizard will move to the next page, not the previous. Do you have to use <code>tabindex</code> to do this?</p>",\
+    "OwnerUserId": 40,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 2354564,\
+    "LastEditorDisplayName": "kevin d",\
+    "LastEditDate": "2014-07-14 07:46:45",\
+    "LastActivityDate": "2016-06-01 19:32:07",\
+    "Title": "Multiple submit buttons in an HTML form",\
+    "Tags": "<html><form-submit><html-form><submit-button>",\
+    "AnswerCount": 20,\
+    "CommentCount": 0,\
+    "FavoriteCount": 29,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 49,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 24,\
+    "CreationDate": "2008-08-01 13:02:51",\
+    "DeletionDate": 0,\
+    "Score": 30,\
+    "ViewCount": 0,\
+    "Body": "<p><a href=\\"http://www.brokenbuild.com/blog/2006/08/15/mysql-triggers-how-do-you-abort-an-insert-update-or-delete-with-a-trigger/\\">Here is one hack</a> that may work. It isn't clean, but it looks like it might work:</p>\\n\\n<p>Essentially, you just try to update a column that doesn't exist.</p>",\
+    "OwnerUserId": 43,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 957909,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2012-12-24 21:24:41",\
+    "LastActivityDate": "2012-12-24 21:24:41",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 1,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 51,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 36,\
+    "CreationDate": "2008-08-01 13:07:52",\
+    "DeletionDate": 0,\
+    "Score": 18,\
+    "ViewCount": 0,\
+    "Body": "<p>Why don't you want to use triggers.  They are a good thing if you use them correctly.  If you use them as a way to enforce referential integrity that is when they go from good to bad.  But if you use them for monitoring, they are not really considered taboo.</p>",\
+    "OwnerUserId": 17,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 0,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": 0,\
+    "LastActivityDate": "2008-08-01 13:07:52",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 52,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 34,\
+    "CreationDate": "2008-08-01 13:08:59",\
+    "DeletionDate": 0,\
+    "Score": 11,\
+    "ViewCount": 0,\
+    "Body": "<p>Have a look at this article</p>\\n\\n<p><a href=\\"http://www.gskinner.com/blog/archives/2006/06/as3_resource_ma.html\\">http://www.gskinner.com/blog/archives/2006/06/as3_resource_ma.html</a></p>\\n\\n<p>IANA actionscript programmer, however the feeling I'm getting is that, because the garbage collector might not run when you want it to.</p>\\n\\n<p>Hence\\n<a href=\\"http://www.craftymind.com/2008/04/09/kick-starting-the-garbage-collector-in-actionscript-3-with-air/\\">http://www.craftymind.com/2008/04/09/kick-starting-the-garbage-collector-in-actionscript-3-with-air/</a></p>\\n\\n<p>So I'd recommend trying out their collection code and see if it helps</p>\\n\\n<pre><code>private var gcCount:int;<br>private function startGCCycle():void\{<br>    gcCount = 0;<br>    addEventListener(Event.ENTER_FRAME, doGC);<br>\}<br>private function doGC(evt:Event):void\{<br>    flash.system.System.gc();<br>    if(++gcCount &gt; 1)\{<br>        removeEventListener(Event.ENTER_FRAME, doGC);<br>        setTimeout(lastGC, 40);<br>    \}<br>\}<br>private function lastGC():void\{<br>    flash.system.System.gc();<br>\}<br></code></pre>",\
+    "OwnerUserId": 23,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 0,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": 0,\
+    "LastActivityDate": "2008-08-01 13:08:59",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 53,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 34,\
+    "CreationDate": "2008-08-01 13:08:59",\
+    "DeletionDate": 0,\
+    "Score": 16,\
+    "ViewCount": 0,\
+    "Body": "<p>(I'm not positive about this, but...)</p>\\n\\n<p>AS3 uses a non-deterministic garbage collection. Which means that unreferenced memory will be freed up whenever the runtime feels like it (typically not unless there's a reason to run, since it's an expensive operation to execute). This is the same approach used by most modern garbage collected languages (like C# and Java as well).</p>\\n\\n<p>Assuming there are no other references to the memory pointed to by <code>byteArray</code> or the items within the array itself, the memory will be freed at some point after you exit the scope where <code>byteArray</code> is declared.</p>\\n\\n<p>You can force a garbage collection, though you really shouldn't. If you do, do it only for testing... if you do it in production, you'll hurt performance much more than help it.</p>\\n\\n<p>To force a GC, try (yes, twice):</p>\\n\\n<pre><code>flash.system.System.gc();\\nflash.system.System.gc();\\n</code></pre>\\n\\n<p><a href=\\"http://www.craftymind.com/2008/04/09/kick-starting-the-garbage-collector-in-actionscript-3-with-air/\\">You can read more here</a>.</p>",\
+    "OwnerUserId": 34,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 1668244,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2014-07-10 21:03:46",\
+    "LastActivityDate": "2014-07-10 21:03:46",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 56,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 48,\
+    "CreationDate": "2008-08-01 13:10:16",\
+    "DeletionDate": 0,\
+    "Score": 45,\
+    "ViewCount": 0,\
+    "Body": "<p>Give your submit buttons same name like this:</p>\\n\\n<pre><code>&lt;input type=\\"submit\\" name=\\"submitButton\\" value=\\"Previous Page\\" /&gt;\\n&lt;input type=\\"submit\\" name=\\"submitButton\\" value=\\"Next Page\\" /&gt;\\n</code></pre>\\n\\n<p>When the user presses enter and the <em>Request</em> goes to server, you can check the value for <code>submitButton</code> on your server-side code which contains a collection of form <code>name/value</code> pairs. For example in classic ASP:</p>\\n\\n<pre class=\\"lang-vb prettyprint-override\\"><code>If Request.Form(\\"submitButton\\") = \\"Previous Page\\" Then\\n    ' Code for Previous Page\\nElseIf Request.Form(\\"submitButton\\") = \\"Next Page\\" Then\\n    ' Code for Next Page\\nEnd If\\n</code></pre>\\n\\n<p>Reference: <a href=\\"http://www.chami.com/tips/internet/042599I.html\\">Using multiple submit buttons on a single form</a></p>",\
+    "OwnerUserId": 39,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 2354564,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2014-07-14 07:55:42",\
+    "LastActivityDate": "2014-07-14 07:55:42",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 2,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 58,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 48,\
+    "CreationDate": "2008-08-01 13:14:30",\
+    "DeletionDate": 0,\
+    "Score": 46,\
+    "ViewCount": 0,\
+    "Body": "<p>Would it be possible for you to change the previous button type into a button like this:  </p>\\n\\n<pre><code>&lt;input type=\\"button\\" name=\\"prev\\" value=\\"Previous Page\\" /&gt;\\n</code></pre>\\n\\n<p>Now the Next button would be the default, plus you could also add the <code>default</code> attribute to it so that your browser will highlight it like so:</p>\\n\\n<pre><code>&lt;input type=\\"submit\\" name=\\"next\\" value=\\"Next Page\\" default /&gt;\\n</code></pre>\\n\\n<p>Hope that helps.</p>",\
+    "OwnerUserId": 37,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 875317,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2015-07-06 22:50:09",\
+    "LastActivityDate": "2015-07-06 22:50:09",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 6,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 59,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 43110,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 13:14:33",\
+    "DeletionDate": 0,\
+    "Score": 53,\
+    "ViewCount": 20393,\
+    "Body": "<p>Let's say I have a <code>DataTable</code> with a <code>Name</code> column. I want to have a collection of the unique names ordered alphabetically. The following query ignores the order by clause.</p>\\n\\n<pre><code>var names =\\n    (from DataRow dr in dataTable.Rows\\n    orderby (string)dr[\\"Name\\"]\\n    select (string)dr[\\"Name\\"]).Distinct();\\n</code></pre>\\n\\n<p>Why does the <code>orderby</code> not get enforced?</p>",\
+    "OwnerUserId": 45,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 885318,\
+    "LastEditorDisplayName": "Keith",\
+    "LastEditDate": "2014-01-01 16:43:44",\
+    "LastActivityDate": "2014-08-19 23:17:56",\
+    "Title": "How do I get a distinct, ordered list of names from a DataTable using LINQ?",\
+    "Tags": "<c#><linq><.net-3.5>",\
+    "AnswerCount": 5,\
+    "CommentCount": 0,\
+    "FavoriteCount": 2,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 60,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 34,\
+    "CreationDate": "2008-08-01 13:14:40",\
+    "DeletionDate": 0,\
+    "Score": 10,\
+    "ViewCount": 0,\
+    "Body": "<p>Unfortunately when it comes to memory management in <em>Flash/actionscript</em> there isn't a whole lot you can do. ActionScript was designed to be easy to use (so they didn't want people to have to worry about memory management)</p>\\n\\n<p>The following is a workaround, instead of creating a <code>ByteArray</code> variable try this.</p>\\n\\n<pre><code>var byteObject:Object = new Object();\\n\\nbyteObject.byteArray = new ByteArray();\\n\\n...\\n\\n//Then when you are finished delete the variable from byteObject\\ndelete byteObject.byteArray;\\n</code></pre>\\n\\n<p>Where <code>byteArray</code> is a dynamic property of <code>byteObject</code>, you can free the memory that was allocated for it.</p>",\
+    "OwnerUserId": 41,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 2354564,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2014-07-11 14:58:07",\
+    "LastActivityDate": "2014-07-11 14:58:07",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 61,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 13:17:20",\
+    "DeletionDate": 0,\
+    "Score": 25,\
+    "ViewCount": 2071,\
+    "Body": "<p>Where can I find a list of the MIME types and identifying characters for Office 2007 files?</p>\\n\\n<p>I have an upload form that is restricting uploads based on extension and identifying characters, but I cannot seem to find the Office 2007 MIME types.</p>",\
+    "OwnerUserId": 0,\
+    "OwnerDisplayName": "maclema",\
+    "LastEditorUserId": 1454806,\
+    "LastEditorDisplayName": "Mark Biek",\
+    "LastEditDate": "2013-04-11 20:15:23",\
+    "LastActivityDate": "2016-03-27 18:01:42",\
+    "Title": "Office 2007 File Type, Mime Types and Identifying Characters",\
+    "Tags": "<office-2007><file-type>",\
+    "AnswerCount": 1,\
+    "CommentCount": 0,\
+    "FavoriteCount": 2,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": "2013-04-11 20:15:23"\
+  \},\
+  \{\
+    "Id": 62,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 59,\
+    "CreationDate": "2008-08-01 13:18:37",\
+    "DeletionDate": 0,\
+    "Score": 37,\
+    "ViewCount": 0,\
+    "Body": "<p><strong>The problem is that the Distinct\\n operator does not grant that it will\\n maintain the original order of\\n values.</strong></p>\\n\\n<p>So your query will need to work like this</p>\\n\\n<pre><code>var names = (from DataRow dr in dataTable.Rows\\n             select (string)dr[\\"Name\\"]).Distinct().OrderBy( name =&gt; name );\\n</code></pre>",\
+    "OwnerUserId": 45,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 1248536,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2014-08-19 23:17:56",\
+    "LastActivityDate": "2014-08-19 23:17:56",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 65,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 61,\
+    "CreationDate": "2008-08-01 13:20:44",\
+    "DeletionDate": 0,\
+    "Score": 11,\
+    "ViewCount": 0,\
+    "Body": "<p><a href=\\"http://www.bram.us/2007/05/25/office-2007-mime-types-for-iis/\\">Office 2007 MIME Types for IIS</a></p>\\n\\n<ul>\\n<li>.docm, application/vnd.ms-word.document.macroEnabled.12</li>\\n<li>.docx, application/vnd.openxmlformats-officedocument.wordprocessingml.document</li>\\n<li>.dotm, application/vnd.ms-word.template.macroEnabled.12</li>\\n<li>.dotx, application/vnd.openxmlformats-officedocument.wordprocessingml.template</li>\\n<li>.potm, application/vnd.ms-powerpoint.template.macroEnabled.12</li>\\n<li>.potx, application/vnd.openxmlformats-officedocument.presentationml.template</li>\\n<li>.ppam, application/vnd.ms-powerpoint.addin.macroEnabled.12</li>\\n<li>.ppsm, application/vnd.ms-powerpoint.slideshow.macroEnabled.12</li>\\n<li>.ppsx, application/vnd.openxmlformats-officedocument.presentationml.slideshow</li>\\n<li>.pptm, application/vnd.ms-powerpoint.presentation.macroEnabled.12</li>\\n<li>.pptx, application/vnd.openxmlformats-officedocument.presentationml.presentation</li>\\n<li>.xlam, application/vnd.ms-excel.addin.macroEnabled.12</li>\\n<li>.xlsb, application/vnd.ms-excel.sheet.binary.macroEnabled.12</li>\\n<li>.xlsm, application/vnd.ms-excel.sheet.macroEnabled.12</li>\\n<li>.xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</li>\\n<li>.xltm, application/vnd.ms-excel.template.macroEnabled.12</li>\\n<li>.xltx, application/vnd.openxmlformats-officedocument.spreadsheetml.template</li>\\n</ul>",\
+    "OwnerUserId": 35,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 2354564,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2014-07-14 07:43:54",\
+    "LastActivityDate": "2014-07-14 07:43:54",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 66,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 4521,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 13:20:46",\
+    "DeletionDate": 0,\
+    "Score": 47,\
+    "ViewCount": 3818,\
+    "Body": "<p>How do you page through a collection in LINQ given that you have a <code>startIndex</code> and a <code>count</code>?</p>",\
+    "OwnerUserId": 17,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 1039608,\
+    "LastEditorDisplayName": "Keith",\
+    "LastEditDate": "2012-05-04 09:03:54",\
+    "LastActivityDate": "2016-02-07 00:24:49",\
+    "Title": "Paging a collection with LINQ",\
+    "Tags": "<linq><.net-3.5>",\
+    "AnswerCount": 4,\
+    "CommentCount": 0,\
+    "FavoriteCount": 4,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 68,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 66,\
+    "CreationDate": "2008-08-01 13:22:04",\
+    "DeletionDate": 0,\
+    "Score": 50,\
+    "ViewCount": 0,\
+    "Body": "<p>It is very simple with the <code>Skip</code> and <code>Take</code> extension methods.</p>\\n\\n<pre><code>var query = from i in ideas\\n            select i;\\n\\nvar paggedCollection = query.Skip(startIndex).Take(count);\\n</code></pre>",\
+    "OwnerUserId": 17,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 1039608,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2012-05-04 09:04:26",\
+    "LastActivityDate": "2012-05-04 09:04:26",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 2,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 71,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 19,\
+    "CreationDate": "2008-08-01 13:37:59",\
+    "DeletionDate": 0,\
+    "Score": 58,\
+    "ViewCount": 0,\
+    "Body": "<p>Here's a general description of a technique for calculating pi that I learnt in high school.</p>\\n\\n<p>I only share this because I think it is simple enough that anyone can remember it, indefinitely, plus it teaches you the concept of \\"Monte-Carlo\\" methods -- which are statistical methods of arriving at answers that don't immediately appear to be deducible through random processes.</p>\\n\\n<p>Draw a square, and inscribe a quadrant (one quarter of a semi-circle) inside that square (a quadrant with radius equal to the side of the square, so it fills as much of the square as possible)</p>\\n\\n<p>Now throw a dart at the square, and record where it lands -- that is, choose a random point anywhere inside the square. Of course, it landed inside the square, but is it inside the semi-circle? Record this fact.</p>\\n\\n<p>Repeat this process many times -- and you will find there is a ratio of the number of points inside the semi-circle versus the total number thrown, call this ratio x.</p>\\n\\n<p>Since the area of the square is r times r, you can deduce that the area of the semi circle is x times r times r (that is, x times r squared). Hence x times 4 will give you pi. </p>\\n\\n<p>This is not a quick method to use. But it's a nice example of a Monte Carlo method. And if you look around, you may find that many problems otherwise outside your computational skills can be solved by such methods.</p>",\
+    "OwnerUserId": 49,\
+    "OwnerDisplayName": "Leon Bambrick",\
+    "LastEditorUserId": 63550,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2012-05-25 21:09:03",\
+    "LastActivityDate": "2012-05-25 21:09:03",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 1,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 72,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 13:38:27",\
+    "DeletionDate": 0,\
+    "Score": 23,\
+    "ViewCount": 1029,\
+    "Body": "<p>I've got all these comments that I want to make into 'RDoc comments', so they can be formatted appropriately and viewed using <code>ri</code>.  Can anyone get me started on understanding how to use RDoc?</p>",\
+    "OwnerUserId": 25,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 219883,\
+    "LastEditorDisplayName": "Gaius",\
+    "LastEditDate": "2013-05-05 00:24:51",\
+    "LastActivityDate": "2013-05-05 00:24:51",\
+    "Title": "How do I add existing comments to RDoc in Ruby?",\
+    "Tags": "<ruby><rdoc>",\
+    "AnswerCount": 2,\
+    "CommentCount": 1,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 73,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 25,\
+    "CreationDate": "2008-08-01 13:40:16",\
+    "DeletionDate": 0,\
+    "Score": 9,\
+    "ViewCount": 0,\
+    "Body": "<p>@Jax: The <code>extern \\"C\\"</code> thing matters, very very much. If a header file doesn't have one, then (unless it's a C++-only header file), you would have to enclose your <code>#include</code> with it:</p>\\n\\n<pre><code>extern \\"C\\" \{<br>#include &lt;sys/socket.h&gt;<br>// include other similarly non-compliant header files<br>\}<br></code></pre>\\n\\n<p>Basically, anytime where a C++ program wants to link to C-based facilities, the <code>extern \\"C\\"</code> is vital. In practical terms, it means that the names used in external references will not be mangled, like normal C++ names would. <a href=\\"http://www.parashift.com/c++-faq-lite/mixing-c-and-cpp.html\\">Reference.</a></p>",\
+    "OwnerUserId": 13,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 13,\
+    "LastEditorDisplayName": "Chris Jester-Young",\
+    "LastEditDate": "2008-08-01 13:54:25",\
+    "LastActivityDate": "2008-08-01 13:54:25",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 76,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 42,\
+    "CreationDate": "2008-08-01 13:44:35",\
+    "DeletionDate": 0,\
+    "Score": 6,\
+    "ViewCount": 0,\
+    "Body": "<p>I believe the easiest way would be to follow Jeff's own advice and have a look around existing code. Try looking at Wordpress, Drupal, Joomla and other well known PHP-based CMS's to see how their API hooks look and feel. This way you can even get ideas you may have not thought of previously to make things a little more rubust.</p>\\n\\n<p>A more direct answer would be to write general files that they would \\"include_once\\" into their file that would provide the usability they would need. This would be broken up into categories and NOT provided in one MASSIVE \\"hooks.php\\" file. Be careful though, because what ends up happening is that files that they include end up having more and more dependencies and functionality improves. Try to keep API dependencies low. I.E fewer files for them to include.</p>",\
+    "OwnerUserId": 50,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 0,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": 0,\
+    "LastActivityDate": "2008-08-01 13:44:35",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 1,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 77,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 42,\
+    "CreationDate": "2008-08-01 13:46:00",\
+    "DeletionDate": 0,\
+    "Score": 112,\
+    "ViewCount": 0,\
+    "Body": "<p>You could use an Observer pattern.  A simple functional way to accomplish this:</p>\\n\\n<pre><code>&lt;?php<br><br>/** Plugin system **/<br><br>$listeners = array();<br><br>/* Create an entry point for plugins */<br>function hook()\{<br>  global $listeners;<br><br>  $num_args = func_num_args();<br>  $args = func_get_args();<br><br>  if($num_args &lt; 2)<br>    trigger_error(\\"Insufficient arguments\\", E_USER_ERROR);<br><br>  // Hook name should always be first argument<br>  $hook_name = array_shift($args);<br><br>  if(!isset($listeners[$hook_name]))<br>    return; // No plugins have registered this hook<br><br>  foreach($listeners[$hook_name] as $func)\{<br>    $args = $func($args); <br>  \}<br><br>  return $args;<br>\}<br><br>/* Attach a function to a hook */<br>function add_listener($hook, $function_name)\{<br>  global $listeners;<br><br>  $listeners[$hook][] = $function_name;<br>\}<br><br><br>/////////////////////////<br><br>/** Sample Plugin **/<br>add_listener('a_b', 'my_plugin_func1');<br>add_listener('str', 'my_plugin_func2');<br><br>function my_plugin_func1($args)\{<br>  return array(4, 5);<br>\}<br>function my_plugin_func2($args)\{<br>  return str_replace('sample', 'CRAZY', $args[0]);<br>\}<br><br>/////////////////////////<br><br>/** Sample Application **/<br><br>$a = 1;<br>$b = 2;<br><br>list($a, $b) = hook('a_b', $a, $b);<br><br>$str  = \\"This is my sample application\\\\n\\";<br>$str .= \\"$a + $b = \\".($a+$b).\\"\\\\n\\";<br>$str .= \\"$a * $b = \\".($a*$b).\\"\\\\n\\";<br><br>$str = hook('str', $str);<br><br>echo $str;<br><br>?&gt;<br></code></pre>\\n\\n<p><strong>Output:</strong></p>\\n\\n<pre><code>This is my CRAZY application<br>4 + 5 = 9<br>4 * 5 = 20<br></code></pre>\\n\\n<p><strong>Notes:</strong></p>\\n\\n<p>For this example source code, you must declare all your plugins before the actual source code that you want to be extendable.  I've included an example of how to handle single or multiple values being passed to the plugin.  The hardest part of this is writing the actual documentation which lists what arguments get passed to each hook.</p>\\n\\n<p>This is just one method of accomplishing a plugin system in PHP.  There are better alternatives, I suggest you check out the WordPress Documentation for more information.</p>\\n\\n<p><em>Sorry, it appears underscore characters are replaced by HTML entities by Markdown?  I can re-post this code when this bug gets fixed.</em></p>\\n\\n<p><em>Edit: Nevermind, it only appears that way when you are editing</em></p>",\
+    "OwnerUserId": 40,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 0,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": 0,\
+    "LastActivityDate": "2008-08-01 13:46:00",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 2,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": "2011-02-10 01:43:58"\
+  \},\
+  \{\
+    "Id": 78,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 4,\
+    "CreationDate": "2008-08-01 13:53:06",\
+    "DeletionDate": 0,\
+    "Score": 34,\
+    "ViewCount": 0,\
+    "Body": "<p>It sounds like <code>this.Opacity</code> is a double value, and the compiler doesn't like you trying to cram a decimal value into it.</p>",\
+    "OwnerUserId": 55,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 967315,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2012-10-14 11:54:40",\
+    "LastActivityDate": "2012-10-14 11:54:40",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 79,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 62853,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 13:56:33",\
+    "DeletionDate": 0,\
+    "Score": 24,\
+    "ViewCount": 10528,\
+    "Body": "<p>The version of <strong>Subclipse (1.2.4)</strong> currently available through Aptana's automatic <em>Plugins Manager</em> does not work with the newest version of Subversion.</p>\\n\\n<p>I see on the Subclipse website however that they have 1.4.2 out for Eclipse. So I added a <a href=\\"http://subclipse.tigris.org/update_1.4.x\\" rel=\\"nofollow\\">new remote update site</a> to my Update manager. When I tried to install it, it told me I needed <strong>Mylyn 3.0.0</strong>. So after much searching I found Mylyn 3.0.0 and added <a href=\\"http://download.eclipse.org/tools/mylyn/update/e3.3\\" rel=\\"nofollow\\">another new remote update site</a> to my update manager. Then when I tried to install that, it told me I needed <strong>org.eclipse.ui 3.3.0</strong> or equivalent.</p>\\n\\n<p>Looking at the configuration details for Aptana, it looks like it is built against eclipse 3.2.2.</p>\\n\\n<p>Does anyone know if there is a way to upgrade the version of Eclipse Aptana that is built against to 3.3.0? Or if there is some other way to get Subclipse to work with the very newest version of Subversion?</p>\\n\\n<p>I know this isn't necessarily a \\"programming\\" question, but I hope it's ok since it's highly relevant to the programming experience.</p>",\
+    "OwnerUserId": 58,\
+    "OwnerDisplayName": "Christopher McCulloh",\
+    "LastEditorUserId": 415755,\
+    "LastEditorDisplayName": "Gaius",\
+    "LastEditDate": "2016-03-10 03:47:08",\
+    "LastActivityDate": "2016-03-10 03:47:08",\
+    "Title": "Getting Subclipse in Aptana to work with the newest release of Subversion",\
+    "Tags": "<eclipse><svn><aptana><subclipse>",\
+    "AnswerCount": 4,\
+    "CommentCount": 0,\
+    "FavoriteCount": 1,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 80,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 124,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 13:57:07",\
+    "DeletionDate": 0,\
+    "Score": 24,\
+    "ViewCount": 4335,\
+    "Body": "<p>I've written a database generation script in <a href=\\"http://en.wikipedia.org/wiki/SQL\\">SQL</a> and want to execute it in my <a href=\\"http://en.wikipedia.org/wiki/Adobe_Integrated_Runtime\\">Adobe AIR</a> application:</p>\\n\\n<pre><code>Create Table tRole (\\n      roleID integer Primary Key\\n      ,roleName varchar(40)\\n);\\nCreate Table tFile (\\n    fileID integer Primary Key\\n    ,fileName varchar(50)\\n    ,fileDescription varchar(500)\\n    ,thumbnailID integer\\n    ,fileFormatID integer\\n    ,categoryID integer\\n    ,isFavorite boolean\\n    ,dateAdded date\\n    ,globalAccessCount integer\\n    ,lastAccessTime date\\n    ,downloadComplete boolean\\n    ,isNew boolean\\n    ,isSpotlight boolean\\n    ,duration varchar(30)\\n);\\nCreate Table tCategory (\\n    categoryID integer Primary Key\\n    ,categoryName varchar(50)\\n    ,parent_categoryID integer\\n);\\n...\\n</code></pre>\\n\\n<p>I execute this in Adobe AIR using the following methods:</p>\\n\\n<pre><code>public static function RunSqlFromFile(fileName:String):void \{\\n    var file:File = File.applicationDirectory.resolvePath(fileName);\\n    var stream:FileStream = new FileStream();\\n    stream.open(file, FileMode.READ)\\n    var strSql:String = stream.readUTFBytes(stream.bytesAvailable);\\n    NonQuery(strSql);\\n\}\\n\\npublic static function NonQuery(strSQL:String):void\\n\{\\n    var sqlConnection:SQLConnection = new SQLConnection();\\n    sqlConnection.open(File.applicationStorageDirectory.resolvePath(DBPATH);\\n    var sqlStatement:SQLStatement = new SQLStatement();\\n    sqlStatement.text = strSQL;\\n    sqlStatement.sqlConnection = sqlConnection;\\n    try\\n    \{\\n        sqlStatement.execute();\\n    \}\\n    catch (error:SQLError)\\n    \{\\n        Alert.show(error.toString());\\n    \}\\n\}\\n</code></pre>\\n\\n<p>No errors are generated, however only <code>tRole</code> exists. It seems that it only looks at the first query (up to the semicolon- if I remove it, the query fails). Is there a way to call multiple queries in one statement?</p>",\
+    "OwnerUserId": 26,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 243557,\
+    "LastEditorDisplayName": "modesty",\
+    "LastEditDate": "2013-10-04 01:18:16",\
+    "LastActivityDate": "2013-10-04 01:18:16",\
+    "Title": "SQLStatement.execute() - multiple queries in one statement",\
+    "Tags": "<flex><actionscript-3><air>",\
+    "AnswerCount": 3,\
+    "CommentCount": 0,\
+    "FavoriteCount": 2,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 81,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 34,\
+    "CreationDate": "2008-08-01 14:03:22",\
+    "DeletionDate": 0,\
+    "Score": 10,\
+    "ViewCount": 0,\
+    "Body": "<p>I believe you have answered your own question...</p>\\n\\n<p><code>System.totalMemory</code> gives you the total amount of memory being \\"used\\", not allocated. It is accurate that your application may only be using 20mb, but it has 5mb that is free for future allocations.</p>\\n\\n<p>I'm not sure if the Adobe docs would shed light on the way that it manages memory...</p>",\
+    "OwnerUserId": 41,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 967315,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2012-10-14 12:18:19",\
+    "LastActivityDate": "2012-10-14 12:18:19",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 82,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 36,\
+    "CreationDate": "2008-08-01 14:06:28",\
+    "DeletionDate": 0,\
+    "Score": 14,\
+    "ViewCount": 0,\
+    "Body": "<p>Have a DTS job (or a job that is started by a windows service) that runs at a given interval. Each time it is run, it gets information about the given table by using the system <a href=\\"http://msdn.microsoft.com/en-us/library/ms186778.aspx\\">INFORMATION_SCHEMA</a> tables, and records this data in the data repository. Compare the data returned regarding the structure of the table with the data returned the previous time. If it is different, then you know that the structure has changed.</p>\\n\\n<p>Example query to return information regarding all of the columns in table ABC (ideally listing out just the columns from the INFORMATION_SCHEMA table that you want, instead of using <em>select *</em> like I do here):</p>\\n\\n<pre><code>select * from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = 'ABC'\\n</code></pre>\\n\\n<p>You would monitor different columns and INFORMATION_SCHEMA views depending on how exactly you define \\"changes to a table\\".</p>",\
+    "OwnerUserId": 51,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 0,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": 0,\
+    "LastActivityDate": "2008-08-01 14:06:28",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 1,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 84,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 16,\
+    "CreationDate": "2008-08-01 14:10:55",\
+    "DeletionDate": 0,\
+    "Score": 5,\
+    "ViewCount": 0,\
+    "Body": "<p>If you use a return type of <code>IEnumerable</code>, you can return your <strong>query</strong> variable directly.</p>",\
+    "OwnerUserId": 60,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 5469,\
+    "LastEditorDisplayName": "Kilhoffer",\
+    "LastEditDate": "2008-10-18 18:26:59",\
+    "LastActivityDate": "2008-10-18 18:26:59",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 85,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 154,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 14:19:52",\
+    "DeletionDate": 0,\
+    "Score": 69,\
+    "ViewCount": 30382,\
+    "Body": "<p>What are your best practices around creating flat file database structures in PHP?  A lot of the more mature PHP flat file frameworks I see out there attempt to implement SQL-like query syntax, which is over the top for my purposes in most cases (I would just use a database at that point).</p>\\n\\n<p>Are there any elegant tricks out there to get good performance and features with the small code overhead one would want by taking on this problem in the first place?</p>",\
+    "OwnerUserId": 59,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 243557,\
+    "LastEditorDisplayName": "saint_groceon",\
+    "LastEditDate": "2013-10-04 01:17:44",\
+    "LastActivityDate": "2015-08-24 17:50:22",\
+    "Title": "Flat File Databases",\
+    "Tags": "<php><sql><database><flat-file>",\
+    "AnswerCount": 13,\
+    "CommentCount": 0,\
+    "FavoriteCount": 14,\
+    "ClosedDate": "2015-10-22 13:43:51",\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 86,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 4,\
+    "CreationDate": "2008-08-01 14:23:28",\
+    "DeletionDate": 0,\
+    "Score": 78,\
+    "ViewCount": 0,\
+    "Body": "<p>A more generic answer for the generic question \\"Decimal vs Double?\\": <strong>Decimal</strong> for monetary calculations to preserve the precision, <strong>Double</strong> for scientific calculations that do not get affected by small differences. Since Double is a type which is native to the CPU (internal representation is stored in <em>base 2</em>), calculations made with Double perform better then Decimal (which is represented in <em>base 10</em> internally).</p>",\
+    "OwnerUserId": 39,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 2354564,\
+    "LastEditorDisplayName": "huseyint",\
+    "LastEditDate": "2014-07-11 14:42:28",\
+    "LastActivityDate": "2014-07-11 14:42:28",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 87,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 85,\
+    "CreationDate": "2008-08-01 14:26:22",\
+    "DeletionDate": 0,\
+    "Score": 6,\
+    "ViewCount": 0,\
+    "Body": "<p>One framework I'm considering would be for a blogging platform. Since just about any possible view of data you would want would be sorted by date, I was thinking about this structure:</p>\\n\\n<p>One directory per content node:</p>\\n\\n<pre><code>./content/YYYYMMDDHHMMSS/\\n</code></pre>\\n\\n<p>Subdirectories of each node including  </p>\\n\\n<pre><code>/tags  \\n/authors  \\n/comments  \\n</code></pre>\\n\\n<p>As well as simple text files in the node directory for pre- and post-rendered content and the like.</p>\\n\\n<p>This would allow a simple PHP <a href=\\"http://us3.php.net/glob\\" rel=\\"nofollow\\"><code>glob()</code></a> call (and probably a reversal of the result array) to query on just about anything within the content structure:</p>\\n\\n<pre><code>glob(\\"content/*/tags/funny\\");  \\n</code></pre>\\n\\n<p>Would return paths including all articles tagged \\"funny\\".</p>",\
+    "OwnerUserId": 59,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 4551041,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": "2015-08-24 17:19:04",\
+    "LastActivityDate": "2015-08-24 17:19:04",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 88,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 98,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 14:36:18",\
+    "DeletionDate": 0,\
+    "Score": 64,\
+    "ViewCount": 32111,\
+    "Body": "<p>So I find myself porting a game, that was originally written for the Win32 API, to Linux (well, porting the OS X port of the Win32 port to Linux). I have implemented <code>QueryPerformanceCounter</code> by giving the uSeconds since the process start up:  </p>\\n\\n<pre><code>BOOL QueryPerformanceCounter(LARGE_INTEGER* performanceCount)\\n\{\\n    gettimeofday(&amp;currentTimeVal, NULL);\\n    performanceCount-&gt;QuadPart = (currentTimeVal.tv_sec - startTimeVal.tv_sec);\\n    performanceCount-&gt;QuadPart *= (1000 * 1000);\\n    performanceCount-&gt;QuadPart += (currentTimeVal.tv_usec - startTimeVal.tv_usec);\\n\\n    return true;\\n\}\\n</code></pre>\\n\\n<p>This, coupled with <code>QueryPerformanceFrequency()</code> giving a constant 1000000 as the frequency, works well <b>on my machine</b>, giving me a 64 bit variable that contains <code>uSeconds</code> since the program's start up. So <em>is this portable?</em> I don't want to discover it works differently if the kernel was compiled in a certain way or anything like that. I am fine with it being non-portable to something other than Linux, however.</p>",\
+    "OwnerUserId": 61,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 0,\
+    "LastEditorDisplayName": "user1645055",\
+    "LastEditDate": "2012-11-27 07:20:52",\
+    "LastActivityDate": "2016-02-11 04:02:08",\
+    "Title": "Is gettimeofday() guaranteed to be of microsecond resolution?",\
+    "Tags": "<linux><winapi><visual-c++><unix><timer>",\
+    "AnswerCount": 10,\
+    "CommentCount": 0,\
+    "FavoriteCount": 15,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 89,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 79,\
+    "CreationDate": "2008-08-01 14:41:01",\
+    "DeletionDate": 0,\
+    "Score": 4,\
+    "ViewCount": 0,\
+    "Body": "<p>I've had problems with JavaHL in Eclipse Ganymede, when it worked fine in Eclipse Europa.  I'm not sure how Aptana is different, but try either upgrading JavaHL or switching to the pure-java SVNKit implementation within the Subclipse config.</p>",\
+    "OwnerUserId": 0,\
+    "OwnerDisplayName": "Ted Dziuba",\
+    "LastEditorUserId": 0,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": 0,\
+    "LastActivityDate": "2008-08-01 14:41:01",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 90,\
+    "PostTypeId": 1,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 0,\
+    "CreationDate": "2008-08-01 14:41:24",\
+    "DeletionDate": 0,\
+    "Score": 139,\
+    "ViewCount": 53142,\
+    "Body": "<p>Are there any really good tutorials explaining <a href=\\"http://svnbook.red-bean.com/en/1.7/svn.branchmerge.html\\">branching and merging</a> with Apache Subversion? </p>\\n\\n<p>All the better if it's specific to TortoiseSVN client.</p>",\
+    "OwnerUserId": 58,\
+    "OwnerDisplayName": "Christopher McCulloh",\
+    "LastEditorUserId": 761095,\
+    "LastEditorDisplayName": "Gaius",\
+    "LastEditDate": "2012-08-17 15:15:41",\
+    "LastActivityDate": "2012-08-17 15:15:41",\
+    "Title": "Good branching and merging tutorials for TortoiseSVN?",\
+    "Tags": "<svn><tortoisesvn><branch><branching-and-merging>",\
+    "AnswerCount": 3,\
+    "CommentCount": 0,\
+    "FavoriteCount": 91,\
+    "ClosedDate": "2012-12-26 03:45:49",\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 92,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 90,\
+    "CreationDate": "2008-08-01 14:45:37",\
+    "DeletionDate": 0,\
+    "Score": 12,\
+    "ViewCount": 0,\
+    "Body": "<p><a href=\\"http://svnbook.red-bean.com/\\">Version Control with Subversion</a></p>\\n\\n<p>A very good resource for source control in general. Not really TortoiseSVN specific, though.</p>",\
+    "OwnerUserId": 61,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 0,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": 0,\
+    "LastActivityDate": "2008-08-01 14:45:37",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 93,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 88,\
+    "CreationDate": "2008-08-01 14:46:53",\
+    "DeletionDate": 0,\
+    "Score": 2,\
+    "ViewCount": 0,\
+    "Body": "<p>From my experience, and from what I've read across the internet, the answer is \\"No,\\" it is not guaranteed.  It depends on CPU speed, operating system, flavor of Linux, etc.</p>",\
+    "OwnerUserId": 25,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 25,\
+    "LastEditorDisplayName": "Chris Reath",\
+    "LastEditDate": "2008-08-01 15:01:13",\
+    "LastActivityDate": "2008-08-01 15:01:13",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 97,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 85,\
+    "CreationDate": "2008-08-01 14:52:53",\
+    "DeletionDate": 0,\
+    "Score": 18,\
+    "ViewCount": 0,\
+    "Body": "<p>One way to store flat-file content would be to save literal arrays to php files.  For example:</p>\\n\\n<pre><code>$data = array();\\n\\nif( $_POST ) \{\\n    $data = $_POST;\\n\\n    $content = \\"&lt;?php\\\\n\\";\\n    $content .= '$data=' . var_export($data, true) . \\"\\\\n\\";\\n    $content .= \\"?&gt;\\";\\n\\n    save_to_file($filename, $content);\\n\}\\n\\n// echo form\\n</code></pre>",\
+    "OwnerUserId": 40,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 967315,\
+    "LastEditorDisplayName": "kevin d",\
+    "LastEditDate": "2012-10-14 12:26:49",\
+    "LastActivityDate": "2012-10-14 12:26:49",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 4,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 98,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 88,\
+    "CreationDate": "2008-08-01 14:53:47",\
+    "DeletionDate": 0,\
+    "Score": 44,\
+    "ViewCount": 0,\
+    "Body": "<p>Maybe. But you have bigger problems. <code>gettimeofday()</code> can result in incorrect timings if there are processes on your system that change the timer (ie, ntpd). On a \\"normal\\" linux, though, I believe the resolution of <code>gettimeofday()</code> is 10us. It can jump forward and backward and time, consequently, based on the processes running on your system. This effectively makes the answer to your question no.</p>\\n\\n<p>You should look into <code>clock_gettime(CLOCK_MONOTONIC)</code> for timing intervals. It suffers from several less issues due to things like multi-core systems and external clock settings.</p>\\n\\n<p>Also, look into the <code>clock_getres()</code> function.</p>",\
+    "OwnerUserId": 2089740,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 967315,\
+    "LastEditorDisplayName": "lbrandy",\
+    "LastEditDate": "2012-10-14 12:28:51",\
+    "LastActivityDate": "2012-10-14 12:28:51",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 5,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \},\
+  \{\
+    "Id": 99,\
+    "PostTypeId": 2,\
+    "AcceptedAnswerId": 0,\
+    "ParentId": 88,\
+    "CreationDate": "2008-08-01 14:55:08",\
+    "DeletionDate": 0,\
+    "Score": 6,\
+    "ViewCount": 0,\
+    "Body": "<blockquote>\\n  <p>The actual resolution of gettimeofday() depends on the hardware architecture. Intel processors as well as SPARC machines offer high resolution timers that measure microseconds. Other hardware architectures fall back to the system\'92s timer, which is typically set to 100 Hz. In such cases, the time resolution will be less accurate. </p>\\n</blockquote>\\n\\n<p>I obtained this answer from <a href=\\"http://www.informit.com/guides/content.aspx?g=cplusplus&amp;seqNum=272\\">High Resolution Time Measurement and Timers, Part I</a></p>",\
+    "OwnerUserId": 25,\
+    "OwnerDisplayName": 0,\
+    "LastEditorUserId": 0,\
+    "LastEditorDisplayName": 0,\
+    "LastEditDate": 0,\
+    "LastActivityDate": "2008-08-01 14:55:08",\
+    "Title": 0,\
+    "Tags": 0,\
+    "AnswerCount": 0,\
+    "CommentCount": 0,\
+    "FavoriteCount": 0,\
+    "ClosedDate": 0,\
+    "CommunityOwnedDate": 0\
+  \}\
+]}

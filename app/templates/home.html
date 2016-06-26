@@ -45,8 +45,8 @@
     	
 	}
         #result{
-		    float: left;
-    	            padding-left: 200px;
+		    width:70%;
+    	            margin: auto;
 	}
         .reco{
 		
@@ -57,7 +57,19 @@
         .reco:hover { 
    	 background-color: yellow;
         }
-	
+	.ro-item{
+	  width:50%;
+	  float:left;
+          
+	}
+	.tags_res{
+	  color: darkslateblue;
+	      font-size:larger;
+	}
+	.modal-dialog  {width:90%;}
+	tspan{
+	font-size: x-large
+	}
     </style>
 
 </head>
@@ -189,24 +201,48 @@
         	</div>
 		<div class="modal-body">
 		<div class="row">
-        	<div class="col-sm-8" id="chart">
+        	<div class="col-sm-6" id="chart">
           		<p>This is a small modal.</p>
         	</div>
-		<div class="col-sm-4" >
-                        <ul class="list-group">
-  				<li class="list-group-item">
-    				<span class="label label-default label-pill pull-xs-right" id="lab-left">14</span>
-    				<strong id="word-left" style="color:black "  ></strong>
-		 		</li>
-  				<li class="list-group-item">
-    				<span class="label label-default label-pill pull-xs-right" id="lab-right">2</span>
-    				<strong id="word-right" style="color:black "></strong>
-  				</li>
-  				<li class="list-group-item">
-   	 				<span class="label label-default label-pill pull-xs-right" id="lab-inter">1</span>
-   			 		   <strong  style="color:black "> Intersection</strong>
-  				</li>
+		<div class="col-sm-6" >
+                        <table class="table">
+				 <thead>
+      					<tr>
+        					<th style="color:black ">Tags</th>
+        					<th style="color:black ">No. of people</th>
+        					<th style="color:black ">Prob. of being Answered in 10 mins</th>
+      					</tr>
+    				</thead>
+                        <tbody>
+  				<tr>
+				<td> <strong id="word-left" style="color:black;font-weight: 100 "  ></strong></td>
+    				<td> <span class="label label-default label-pill pull-xs-right" id="lab-left">14</span></td>
+				<td><small id="small-left" class="label label-default label-pill pull-xs-right"></small>
+    				</td>
+		 		</tr>
+				<tr>
+  				<td><strong id="word-right" style="color:black;font-weight: 100 "></strong></td>
+    				<td><span class="label label-default label-pill pull-xs-right" id="lab-right">2</span></td>
+    				<td></strong><small id="small-right" class="label label-default label-pill pull-xs-right" ></small></td>
+                                
+  				</tr>
+  				
+			</tbody>
+			</table>
+			<br/><br/><br/>
+			<ul class="list-group">
+			 <li class="list-group-item">
+                                       
+                                           <strong  style="color:black ">No. of people in  Intersection: </strong>
+                        <strong  style="color:black " id="lab-inter">1</strong>  
+			</li>
+			<li class="list-group-item">
+				<strong  style="color:black ">Relevancy:</strong>
+                        	<strong  style="color:black " id="lab-rel"></strong>
+
+			</li>
 			</ul>
+
                 </div>
 		</div>
 		</div>
@@ -299,13 +335,16 @@
                        	 
 		 });
 		
-		$("#result").append("<div class='alert alert-success' role='alert'><a class='tags_res' onclick='func(\""+j_data.hits.hits[i]._id+"\")'  class='alert-link'><strong>"+j_data.hits.hits[i]._id+"</strong> &nbsp<br/>Average Response Time(Min):"+
+		   $("#result").append("<div class='alert alert-info ro-item' role='alert' ><a class='tags_res' onclick='func(\""+j_data.hits.hits[i]._id+"\")'  class='alert-link'><strong>"+j_data.hits.hits[i]._id+"</strong> &nbsp<br/>Average Response Time(Min):"+
                   //j_data.hits.hits[i]._source.ave_time/j_data.hits.hits[i]._source.no_aws/60000
                   Math.floor((Math.random() * 30) + 1)
                   +"&nbsp<br/>Prob. of being answered in 10 minutes:"+
                   parseInt((j_data.hits.hits[i]._source.part_aws_in_num/(j_data.hits.hits[i]._source.part_aws_in_num+j_data.hits.hits[i]._source.part_aws_no_in_num))*100+"")+"%</a></div>");
+		  //$("#result").append(new_term);
+		  //new_term.show("slow");
 		};
-                console.log(arr);
+                $(".ro-item").each(function(index){$(this).hide().show("slow")});
+                //console.log(arr);
                    	
 	});
 	//alert(2);
@@ -383,7 +422,7 @@
 			}
                         var color_val_to="rgb(255,"+color_val+",0)";
 			color_val=color_val+20;
-			$(this).fadeIn(timer).css({"display":"inline-block","background-color":color_val_to});
+			$(this).fadeIn(timer).css({"display":"inline-block","background-color":color_val_to,"height":"50px","font-size":"x-large"});
 			timer=1000+timer;
 		   });
 		   
@@ -406,6 +445,15 @@
 	$("body").on("click",".reco",function(){
 		//alert(1);
 		$('#mymodal').modal('toggle');
+                var stringT=$(this).html().replace(/:/g,";").replace(/_/g,"-");
+                $.ajax({
+			 dataType:'json',
+                	 url:"{{ url_for('.tags',t='')}}" +stringT  
+		}).done(function(data){
+			var j_data=JSON.parse(data);
+			if(j_data.hits.hits.length>0)
+				$("#small-right").html(j_data.hits.hits[0]._source.part_aws_in_num/(j_data.hits.hits[0]._source.part_aws_in_num+j_data.hits.hits[0]._source.part_aws_no_in_num));
+		})
 		var sets = [ {sets: [$(this).attr("source-name")], size: parseInt($(this).attr("source-num"))},
 		 {sets: [$(this).html()], size: parseInt($(this).attr("this-num"))},
                  {sets: [$(this).attr("source-name"),$(this).html()], size: parseInt($(this).attr("com-num"))}];
@@ -414,6 +462,7 @@
 		$("#lab-right").html(sets[1].size);
                 $("#word-right").html(sets[1].sets);
                 $("#lab-inter").html(sets[2].size);
+		 $("#lab-rel").html(sets[2].size/sets[0].size);
 		//var sets = [ {sets: ['A'], size: 12}, 
              //{sets: ['B'], size: 12},
             //{sets: ['A','B'], size: 2}];
