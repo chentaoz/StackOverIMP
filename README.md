@@ -8,3 +8,5 @@ The system computes the historical data (synthesized) from stackoverflow.com, an
 - Hadoop 2.7.2
 - Kafka 0.9.0.1
 - ZooKeeper 3.4.6
+##Data Pipeline
+![alt tag]./Datapipeline.png
