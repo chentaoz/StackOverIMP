@@ -10,4 +10,4 @@ The system computes the historical data (synthesized) from stackoverflow.com, an
 - ZooKeeper 3.4.6
 
 ## Data Pipeline
-![alt tag]./Datapipeline.png
+![alt tag](./Datapipeline.png)
